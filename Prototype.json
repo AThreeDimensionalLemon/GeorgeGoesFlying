@@ -70,6 +70,30 @@
         "name": "NewSprite",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\NewSprite.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Placeholder.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Placeholder.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_Placeholder.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/assets_Placeholder.png\"}",
+        "name": "assets\\Placeholder",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -111,15 +135,15 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 1,
-          "height": 627,
+          "depth": 9,
+          "height": 604,
           "keepRatio": true,
           "layer": "",
-          "name": "NewSprite",
-          "persistentUuid": "5920a7be-b0ec-4128-8137-5fcd02281474",
-          "width": 834,
-          "x": 530,
-          "y": 214,
+          "name": "PlayerCharacter",
+          "persistentUuid": "66819371-adfa-46d1-91b6-7cb9fd09aee4",
+          "width": 604,
+          "x": 633,
+          "y": 243,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -130,25 +154,55 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "NewSprite",
+          "name": "PlayerCharacter",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "IsCharging",
+              "type": "boolean",
+              "value": false
+            }
+          ],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Dynamic",
+              "bullet": false,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.3,
+              "restitution": 0.1,
+              "linearDamping": 0.1,
+              "angularDamping": 0.1,
+              "gravityScale": 1,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
           "animations": [
             {
-              "name": "NewSprite",
+              "name": "assets\\Placeholder",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "metadata": "{\"pskl\":{}}",
+                  "metadata": "{\"pskl\":{\"data\":\"{\\\"modelVersion\\\":2,\\\"piskel\\\":{\\\"name\\\":\\\"assets\\\\\\\\Placeholder\\\",\\\"description\\\":\\\"\\\",\\\"fps\\\":12,\\\"height\\\":64,\\\"width\\\":64,\\\"layers\\\":[\\\"{\\\\\\\"name\\\\\\\":\\\\\\\"Layer 2\\\\\\\",\\\\\\\"opacity\\\\\\\":1,\\\\\\\"frameCount\\\\\\\":1,\\\\\\\"chunks\\\\\\\":[{\\\\\\\"layout\\\\\\\":[[0]],\\\\\\\"base64PNG\\\\\\\":\\\\\\\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAIBJREFUeF7t14ERACAMAjG7/9A4yMcROEuO27YXficAP8AJ6IBwBz4lSAEKUIACFAgngEEMYhCDGAwjYAxhEIMYxCAGMRhOAIMYxCAGMRhGwBrEIAYxiEEMYjCcAAYxiEEMYjCMgDWIQQxiEIMYxGA4AQxiEIMYxGAYAWsQg3UGP7JJ/0FcwEOPAAAAAElFTkSuQmCC\\\\\\\"}]}\\\",\\\"{\\\\\\\"name\\\\\\\":\\\\\\\"Layer 1\\\\\\\",\\\\\\\"opacity\\\\\\\":1,\\\\\\\"frameCount\\\\\\\":1,\\\\\\\"chunks\\\\\\\":[{\\\\\\\"layout\\\\\\\":[[0]],\\\\\\\"base64PNG\\\\\\\":\\\\\\\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAa9JREFUeF7tmOEOwjAIhLf3f2jNYmaauRa4Xmcp+FdA7uvBVvct+GcPrn9LAOmA4ARyBIIbIJdgjkCOQHACOQLBDRDiKfDatrrOCCNwADg+t1o9AziFWab4R+8MAO6EMPua2gG1+Syh9MKYFkBzORW+1sbVRmHKJWgRZYm17IP6ZjRXsSUggpAcVVe986X6kUsQIgbJUfX2NABUCJonQkgAIiJuAHqSaJ7YfTpARMQL6DnFntymgicdgIpA81RHlwBUmPCg60UHAe7WAYzGGTUe3QHsWxziGJNfmT/QvHaauvoEs+vdtsAGwKxXQqjx6/697gLEe3vrPn98d9dr98h5AKCZHnhZegcQ0gHdoktLMR1wLi12zbPfIU+FEc2yGmW8RYr7YwSA8sSQ+iyAovjao0WVqAy6nqImDYGmqTv8RQhu4p+Jj9L+p9Bhr5IzirL0lA6w0FoxNh2w4qlaNK3sANUNcXUA4steBABNCFEAnGvhR69HAMj9ovoXgFcAUt8SpG++VMjyRJkpNgFUTmOJHaBxmvrfpNVHQNQnBmhwe45JAJ5Pj9F7OoBB0XONN9jRREGIM6NuAAAAAElFTkSuQmCC\\\\\\\"}]}\\\"],\\\"hiddenFrames\\\":[]}}\",\"resourceNames\":[\"assets\\\\Placeholder\"],\"name\":\"assets\\\\Placeholder\"}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite",
+                      "image": "assets\\Placeholder",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -164,20 +218,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 14,
-                            "y": 16
+                            "x": 0,
+                            "y": 0
                           },
                           {
-                            "x": 46,
-                            "y": 16
+                            "x": 64,
+                            "y": 0
                           },
                           {
-                            "x": 46,
-                            "y": 42
+                            "x": 64,
+                            "y": 64
                           },
                           {
-                            "x": 14,
-                            "y": 42
+                            "x": 0,
+                            "y": 64
                           }
                         ]
                       ]
@@ -193,11 +247,169 @@
         "folderName": "__ROOT",
         "children": [
           {
-            "objectName": "NewSprite"
+            "objectName": "PlayerCharacter"
           }
         ]
       },
-      "events": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Movement",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Flight",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Left\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "IsCharging",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "\"MB1HoldTime\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "IsCharging",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonFromTextReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Left\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Physics2::LinearVelocityY"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "Physics2",
+                        "=",
+                        "PlayerCharacter.ObjectTimerElapsedTime(\"MB1HoldTime\") * -2500"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "IsCharging",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "RotateTowardAngle"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "clamp(PlayerCharacter.Physics2::LinearVelocityY() / 25, -45, 45)",
+                        "480",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Swimming",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ],
+              "parameters": []
+            }
+          ],
+          "parameters": []
+        }
+      ],
       "layers": [
         {
           "ambientLightColorB": 200,
@@ -280,6 +492,15 @@
         {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Physics2",
+          "type": "Physics2::Physics2Behavior",
+          "gravityX": 0,
+          "gravityY": 9.8,
+          "worldScale": 100,
+          "scaleX": 100,
+          "scaleY": 100
         },
         {
           "name": "Resizable",
