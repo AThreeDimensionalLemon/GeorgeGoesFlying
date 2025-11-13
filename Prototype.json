@@ -133,7 +133,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.026543321170729807,
+        "zoomFactor": 0.22169247275005177,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -170,6 +170,23 @@
           "x": -44,
           "y": 924,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1033,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Obstacle",
+          "persistentUuid": "80f05d31-1a14-4c5a-9f64-70c866c4d8a0",
+          "width": 64,
+          "x": 1961,
+          "y": 16,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -383,6 +400,66 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Obstacle",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\assets_Placeholder.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -393,6 +470,9 @@
           },
           {
             "objectName": "Water"
+          },
+          {
+            "objectName": "Obstacle"
           }
         ]
       },
@@ -407,79 +487,58 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Horizontal",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "AddForceXY"
-                      },
-                      "parameters": [
-                        "PlayerCharacter",
-                        "PlayerCharacter.Momentum",
-                        "0",
-                        "0"
-                      ]
-                    }
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "PlayerCharacter",
+                    "PlayerCharacter.Momentum",
+                    "0",
+                    "0"
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "PlayerCharacter",
-                        "Water",
-                        "",
-                        "",
-                        "no"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "MouseButtonFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Right\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "PlayerCharacter",
-                        "Momentum",
-                        "/",
-                        "1.015"
-                      ]
-                    }
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "PlayerCharacter",
+                    "Obstacle",
+                    "",
+                    "",
+                    ""
                   ]
                 }
               ],
-              "parameters": []
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "PlayerCharacter",
+                    "Momentum",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
             },
             {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Flight",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -659,6 +718,46 @@
                         "-175",
                         "PlayerCharacter.Physics2::MassCenterX()",
                         "PlayerCharacter.Physics2::MassCenterY()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "Water",
+                        "",
+                        "",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "MouseButtonFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Right\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "Momentum",
+                        "/",
+                        "1.015"
                       ]
                     }
                   ]
