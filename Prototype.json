@@ -161,12 +161,12 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 2454,
+          "height": 533,
           "keepRatio": true,
           "layer": "",
           "name": "Water",
           "persistentUuid": "101ab3ee-268c-4068-96a2-8f7f1bcb11b5",
-          "width": 2322,
+          "width": 4639,
           "x": -44,
           "y": 924,
           "zOrder": 2,
@@ -407,31 +407,73 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Horizontal",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
                 {
-                  "type": {
-                    "value": "AddForceXY"
-                  },
-                  "parameters": [
-                    "PlayerCharacter",
-                    "PlayerCharacter.Momentum",
-                    "0",
-                    "0"
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AddForceXY"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "PlayerCharacter.Momentum",
+                        "0",
+                        "0"
+                      ]
+                    }
                   ]
                 },
                 {
-                  "type": {
-                    "value": "DebuggerTools::ConsoleLog"
-                  },
-                  "parameters": [
-                    "ToString(PlayerCharacter.ArrayVariableFirstNumber(Momentum))",
-                    "\"info\"",
-                    ""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "Water",
+                        "",
+                        "",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "MouseButtonFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Right\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "Momentum",
+                        "/",
+                        "1.015"
+                      ]
+                    }
                   ]
                 }
-              ]
+              ],
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -618,7 +660,46 @@
                         "PlayerCharacter.Physics2::MassCenterX()",
                         "PlayerCharacter.Physics2::MassCenterY()"
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Right\""
+                      ]
                     },
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "Water",
+                        "",
+                        "",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "Momentum",
+                        "<=",
+                        "500"
+                      ]
+                    }
+                  ],
+                  "actions": [
                     {
                       "type": {
                         "value": "SetNumberObjectVariable"
@@ -626,7 +707,7 @@
                       "parameters": [
                         "PlayerCharacter",
                         "Momentum",
-                        "/",
+                        "*",
                         "1.015"
                       ]
                     }
