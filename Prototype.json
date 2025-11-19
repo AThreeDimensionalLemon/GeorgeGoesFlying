@@ -19,7 +19,7 @@
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
     "version": "1.0.0",
-    "name": "Prototype",
+    "name": "George Goes Flying",
     "description": "",
     "author": "",
     "windowWidth": 1920,
@@ -28,7 +28,35 @@
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
-    "platformSpecificAssets": {},
+    "platformSpecificAssets": {
+      "android-icon-144": "",
+      "android-icon-192": "",
+      "android-icon-36": "",
+      "android-icon-48": "",
+      "android-icon-72": "",
+      "android-icon-96": "",
+      "android-windowSplashScreenAnimatedIcon": "",
+      "desktop-icon-512": "",
+      "ios-icon-100": "",
+      "ios-icon-1024": "",
+      "ios-icon-114": "",
+      "ios-icon-120": "",
+      "ios-icon-144": "",
+      "ios-icon-152": "",
+      "ios-icon-167": "",
+      "ios-icon-180": "",
+      "ios-icon-20": "",
+      "ios-icon-29": "",
+      "ios-icon-40": "",
+      "ios-icon-50": "",
+      "ios-icon-57": "",
+      "ios-icon-58": "",
+      "ios-icon-60": "",
+      "ios-icon-72": "",
+      "ios-icon-76": "",
+      "ios-icon-80": "",
+      "ios-icon-87": ""
+    },
     "loadingScreen": {
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
@@ -333,6 +361,14 @@
         "name": "S_FlapChargeBar22",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/S_GroundPlaceholder.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "S_GroundPlaceholder",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -342,7 +378,13 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "totalGrubs",
+      "type": "number",
+      "value": 0
+    }
+  ],
   "layouts": [
     {
       "b": 209,
@@ -364,7 +406,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6846283916654058,
+        "zoomFactor": 0.4913877545329365,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -389,7 +431,7 @@
           "height": 130,
           "keepRatio": true,
           "layer": "",
-          "name": "PlayerCharacter",
+          "name": "George",
           "persistentUuid": "66819371-adfa-46d1-91b6-7cb9fd09aee4",
           "width": 130,
           "x": 0,
@@ -409,8 +451,8 @@
           "name": "AirCurrent",
           "persistentUuid": "0410d8f7-3768-480f-a01a-d5b5f13f2aa4",
           "width": 305,
-          "x": 26,
-          "y": 749,
+          "x": -7,
+          "y": 520,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -441,8 +483,8 @@
           "name": "Grub",
           "persistentUuid": "19a5557d-de2b-4587-b96a-082fc1dfeb83",
           "width": 0,
-          "x": 518,
-          "y": 517,
+          "x": 481,
+          "y": 498,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -463,13 +505,30 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 255,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ground",
+          "persistentUuid": "731691da-a76d-4add-8aff-14059c7d4d59",
+          "width": 1919,
+          "x": 0,
+          "y": 828,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "PlayerCharacter",
+          "name": "George",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [
@@ -487,6 +546,11 @@
               "name": "MaximumCharge",
               "type": "number",
               "value": 1
+            },
+            {
+              "name": "IsLevelEnding",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [],
@@ -1213,13 +1277,24 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "Ground",
+          "texture": "S_GroundPlaceholder",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
           {
-            "objectName": "PlayerCharacter"
+            "objectName": "George"
           },
           {
             "objectName": "AirCurrent"
@@ -1232,6 +1307,9 @@
           },
           {
             "objectName": "FlapChargeBar"
+          },
+          {
+            "objectName": "Ground"
           }
         ]
       },
@@ -1299,7 +1377,7 @@
                     "value": "ResetObjectTimer"
                   },
                   "parameters": [
-                    "PlayerCharacter",
+                    "George",
                     "\"FlapTimer\""
                   ]
                 },
@@ -1308,7 +1386,7 @@
                     "value": "PauseObjectTimer"
                   },
                   "parameters": [
-                    "PlayerCharacter",
+                    "George",
                     "\"FlapTimer\""
                   ]
                 },
@@ -1317,10 +1395,10 @@
                     "value": "Physics2::LinearVelocityX"
                   },
                   "parameters": [
-                    "PlayerCharacter",
+                    "George",
                     "Physics2",
                     "=",
-                    "PlayerCharacter.FlightSpeed"
+                    "George.FlightSpeed"
                   ]
                 }
               ]
@@ -1334,6 +1412,18 @@
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Begin Charging Flap"
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -1351,8 +1441,19 @@
                         "value": "BooleanObjectVariable"
                       },
                       "parameters": [
-                        "PlayerCharacter",
+                        "George",
                         "IsCharging",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "George",
+                        "IsLevelEnding",
                         "False",
                         ""
                       ]
@@ -1364,7 +1465,7 @@
                         "value": "ResetObjectTimer"
                       },
                       "parameters": [
-                        "PlayerCharacter",
+                        "George",
                         "\"FlapTimer\""
                       ]
                     },
@@ -1373,7 +1474,7 @@
                         "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
-                        "PlayerCharacter",
+                        "George",
                         "IsCharging",
                         "True",
                         ""
@@ -1384,11 +1485,23 @@
                         "value": "UnPauseObjectTimer"
                       },
                       "parameters": [
-                        "PlayerCharacter",
+                        "George",
                         "\"FlapTimer\""
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Release Flap"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -1398,7 +1511,7 @@
                         "value": "BooleanObjectVariable"
                       },
                       "parameters": [
-                        "PlayerCharacter",
+                        "George",
                         "IsCharging",
                         "True",
                         ""
@@ -1412,6 +1525,17 @@
                         "",
                         "\"Left\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "George",
+                        "IsLevelEnding",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -1420,10 +1544,10 @@
                         "value": "Physics2::LinearVelocityY"
                       },
                       "parameters": [
-                        "PlayerCharacter",
+                        "George",
                         "Physics2",
                         "=",
-                        "min(PlayerCharacter.ObjectTimerElapsedTime(\"FlapTimer\"), PlayerCharacter. MaximumCharge) * -1500"
+                        "min(George.ObjectTimerElapsedTime(\"FlapTimer\"), George.MaximumCharge) * -1500"
                       ]
                     },
                     {
@@ -1431,7 +1555,7 @@
                         "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
-                        "PlayerCharacter",
+                        "George",
                         "IsCharging",
                         "False",
                         ""
@@ -1454,7 +1578,7 @@
                         "value": "ResetObjectTimer"
                       },
                       "parameters": [
-                        "PlayerCharacter",
+                        "George",
                         "\"FlapTimer\""
                       ]
                     },
@@ -1463,12 +1587,24 @@
                         "value": "PauseObjectTimer"
                       },
                       "parameters": [
-                        "PlayerCharacter",
+                        "George",
                         "\"FlapTimer\""
                       ]
                     }
                   ],
                   "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Boost from Air Currents"
+                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -1477,7 +1613,7 @@
                             "value": "CollisionNP"
                           },
                           "parameters": [
-                            "PlayerCharacter",
+                            "George",
                             "AirCurrent",
                             "",
                             "",
@@ -1491,7 +1627,7 @@
                             "value": "Physics2::LinearVelocityY"
                           },
                           "parameters": [
-                            "PlayerCharacter",
+                            "George",
                             "Physics2",
                             "*",
                             "1.25"
@@ -1510,8 +1646,8 @@
                         "value": "RotateTowardAngle"
                       },
                       "parameters": [
-                        "PlayerCharacter",
-                        "clamp(PlayerCharacter.Physics2::LinearVelocityY() / 25, -45, 45)",
+                        "George",
+                        "clamp(George.Physics2::LinearVelocityY() / 25, -45, 45)",
                         "480",
                         ""
                       ]
@@ -1541,7 +1677,7 @@
                     "value": "CollisionNP"
                   },
                   "parameters": [
-                    "PlayerCharacter",
+                    "George",
                     "Grub",
                     "",
                     "",
@@ -1582,7 +1718,112 @@
                   "parameters": [
                     "distanceTraveled",
                     "=",
-                    "floor(PlayerCharacter.X()/20)"
+                    "floor(George.X() / 20)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Freeze motion upon hitting ground"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "George",
+                    "Ground",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Physics2::LinearVelocityX"
+                  },
+                  "parameters": [
+                    "George",
+                    "Physics2",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Physics2::LinearVelocityY"
+                  },
+                  "parameters": [
+                    "George",
+                    "Physics2",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Physics2::GravityScale"
+                  },
+                  "parameters": [
+                    "George",
+                    "Physics2",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Level End Sequence"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "George",
+                        "IsLevelEnding",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "totalGrubs",
+                        "+",
+                        "grubs"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -1621,9 +1862,9 @@
                   "parameters": [
                     "FlapChargeBar",
                     "=",
-                    "PlayerCharacter.X()+25",
+                    "George.X() + 25",
                     "=",
-                    "PlayerCharacter.Y()+150"
+                    "George.Y() + 150"
                   ]
                 },
                 {
@@ -1633,7 +1874,7 @@
                   "parameters": [
                     "FlapChargeBar",
                     "=",
-                    "floor(min(PlayerCharacter.MaximumCharge, PlayerCharacter.ObjectTimerElapsedTime(\"FlapTimer\"))/PlayerCharacter.MaximumCharge * 10)"
+                    "floor(min(George.MaximumCharge, George.ObjectTimerElapsedTime(\"FlapTimer\")) / George.MaximumCharge * 10)"
                   ]
                 }
               ]
