@@ -855,8 +855,8 @@
                           "parameters": [
                             "PlayerCharacter",
                             "Physics2",
-                            "-",
-                            "500"
+                            "*",
+                            "1.25"
                           ]
                         }
                       ]
