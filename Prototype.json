@@ -157,6 +157,182 @@
         "name": "S_GrubPlaceholder",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar3",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar4",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar5",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar6",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar7",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar8.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar8",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar9.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar9",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar10.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar10",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar11.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar11",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar12.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar12",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar13.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar13",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar14.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar14",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar15.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar15",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar16.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar16",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar17.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar17",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar18.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar18",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar19.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar19",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar20.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar20",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar21.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar21",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_FlapChargeBar22.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_FlapChargeBar22",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -188,7 +364,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.319289458969017,
+        "zoomFactor": 0.6846283916654058,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -271,6 +447,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FlapChargeBar",
+          "persistentUuid": "96f4dc12-20ed-4592-bf04-8b02d207ae04",
+          "width": 0,
+          "x": 29,
+          "y": 486,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -294,7 +486,7 @@
             {
               "name": "MaximumCharge",
               "type": "number",
-              "value": 3
+              "value": 1
             }
           ],
           "effects": [],
@@ -600,6 +792,427 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "FlapChargeBar",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "S_FlapChargeBar",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_FlapChargeBar12",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 22
+                          },
+                          {
+                            "x": 0,
+                            "y": 22
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_FlapChargeBar13",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 22
+                          },
+                          {
+                            "x": 0,
+                            "y": 22
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_FlapChargeBar14",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 22
+                          },
+                          {
+                            "x": 0,
+                            "y": 22
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_FlapChargeBar15",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 22
+                          },
+                          {
+                            "x": 0,
+                            "y": 22
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_FlapChargeBar16",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 22
+                          },
+                          {
+                            "x": 0,
+                            "y": 22
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_FlapChargeBar17",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 22
+                          },
+                          {
+                            "x": 0,
+                            "y": 22
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_FlapChargeBar18",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 22
+                          },
+                          {
+                            "x": 0,
+                            "y": 22
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_FlapChargeBar19",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 22
+                          },
+                          {
+                            "x": 0,
+                            "y": 22
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_FlapChargeBar20",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 22
+                          },
+                          {
+                            "x": 0,
+                            "y": 22
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_FlapChargeBar21",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 22
+                          },
+                          {
+                            "x": 0,
+                            "y": 22
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_FlapChargeBar22",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 22
+                          },
+                          {
+                            "x": 0,
+                            "y": 22
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -616,6 +1229,9 @@
           },
           {
             "objectName": "Grub"
+          },
+          {
+            "objectName": "FlapChargeBar"
           }
         ]
       },
@@ -643,6 +1259,15 @@
                 "yes",
                 "75",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::PauseAnimation"
+              },
+              "parameters": [
+                "FlapChargeBar",
+                "Animation"
               ]
             }
           ]
@@ -672,6 +1297,15 @@
                 {
                   "type": {
                     "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "PlayerCharacter",
+                    "\"FlapTimer\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseObjectTimer"
                   },
                   "parameters": [
                     "PlayerCharacter",
@@ -744,6 +1378,15 @@
                         "True",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "UnPauseObjectTimer"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "\"FlapTimer\""
+                      ]
                     }
                   ]
                 },
@@ -804,6 +1447,24 @@
                         "",
                         "100",
                         "RandomFloatInRange(-1.25, 1.25)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "\"FlapTimer\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PauseObjectTimer"
+                      },
+                      "parameters": [
+                        "PlayerCharacter",
+                        "\"FlapTimer\""
                       ]
                     }
                   ],
@@ -951,6 +1612,28 @@
                     "Text",
                     "=",
                     "\"Distance: \" + ToString(distanceTraveled) + NewLine() + \"Grubs: \" + ToString(grubs)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "FlapChargeBar",
+                    "=",
+                    "PlayerCharacter.X()+25",
+                    "=",
+                    "PlayerCharacter.Y()+150"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeSprite"
+                  },
+                  "parameters": [
+                    "FlapChargeBar",
+                    "=",
+                    "floor(min(PlayerCharacter.MaximumCharge, PlayerCharacter.ObjectTimerElapsedTime(\"FlapTimer\"))/PlayerCharacter.MaximumCharge * 10)"
                   ]
                 }
               ]
