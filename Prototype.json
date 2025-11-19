@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 245,
+    "build": 244,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -149,6 +149,14 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/S_GrubPlaceholder.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_GrubPlaceholder",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -185,19 +193,30 @@
         "selectedLayer": ""
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "distanceTraveled",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "grubs",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "instances": [
         {
           "angle": 0,
           "customSize": true,
-          "depth": 5,
-          "height": 335,
+          "depth": 2,
+          "height": 130,
           "keepRatio": true,
           "layer": "",
           "name": "PlayerCharacter",
           "persistentUuid": "66819371-adfa-46d1-91b6-7cb9fd09aee4",
-          "width": 335,
-          "x": 18,
+          "width": 130,
+          "x": 0,
           "y": 362,
           "zOrder": 1,
           "numberProperties": [],
@@ -225,15 +244,30 @@
           "angle": 0,
           "customSize": true,
           "depth": 9,
-          "height": 205,
+          "height": 200,
+          "layer": "UI",
+          "name": "UI",
+          "persistentUuid": "46ce92fc-f517-4cc6-85f5-ab84fe29605b",
+          "width": 1868,
+          "x": 52,
+          "y": 0,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "SpeedDisplay",
-          "persistentUuid": "46ce92fc-f517-4cc6-85f5-ab84fe29605b",
-          "width": 345,
-          "x": 205,
-          "y": 145,
-          "zOrder": 3,
+          "name": "Grub",
+          "persistentUuid": "19a5557d-de2b-4587-b96a-082fc1dfeb83",
+          "width": 0,
+          "x": 518,
+          "y": 517,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -253,9 +287,9 @@
               "value": false
             },
             {
-              "name": "Momentum",
+              "name": "FlightSpeed",
               "type": "number",
-              "value": 500
+              "value": 250
             },
             {
               "name": "MaximumCharge",
@@ -396,126 +430,6 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "Water",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\assets_Placeholder.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 64,
-                            "y": 0
-                          },
-                          {
-                            "x": 64,
-                            "y": 64
-                          },
-                          {
-                            "x": 0,
-                            "y": 64
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Obstacle",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\assets_Placeholder.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 64,
-                            "y": 0
-                          },
-                          {
-                            "x": 64,
-                            "y": 64
-                          },
-                          {
-                            "x": 0,
-                            "y": 64
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
           "name": "AirCurrent",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -578,7 +492,7 @@
           "assetStoreId": "",
           "bold": false,
           "italic": false,
-          "name": "SpeedDisplay",
+          "name": "UI",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
@@ -589,9 +503,9 @@
               "name": "StayOnScreen",
               "type": "StayOnScreen::StayOnScreen",
               "MarginTop": 0,
-              "MarginBottom": 990,
+              "MarginBottom": 880,
               "MarginLeft": 0,
-              "MarginRight": 1500
+              "MarginRight": 0
             }
           ],
           "string": "Text",
@@ -625,6 +539,67 @@
             "lineHeight": 0,
             "color": "0;0;0"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Grub",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "S_GrubPlaceholder",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_GrubPlaceholder",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -634,16 +609,13 @@
             "objectName": "PlayerCharacter"
           },
           {
-            "objectName": "Water"
-          },
-          {
-            "objectName": "Obstacle"
-          },
-          {
             "objectName": "AirCurrent"
           },
           {
-            "objectName": "SpeedDisplay"
+            "objectName": "UI"
+          },
+          {
+            "objectName": "Grub"
           }
         ]
       },
@@ -689,13 +661,9 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "CollisionNP"
+                    "value": "DepartScene"
                   },
                   "parameters": [
-                    "PlayerCharacter",
-                    "Obstacle",
-                    "",
-                    "",
                     ""
                   ]
                 }
@@ -703,13 +671,22 @@
               "actions": [
                 {
                   "type": {
-                    "value": "SetNumberObjectVariable"
+                    "value": "ResetObjectTimer"
                   },
                   "parameters": [
                     "PlayerCharacter",
-                    "Momentum",
+                    "\"FlapTimer\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Physics2::LinearVelocityX"
+                  },
+                  "parameters": [
+                    "PlayerCharacter",
+                    "Physics2",
                     "=",
-                    "0"
+                    "PlayerCharacter.FlightSpeed"
                   ]
                 }
               ]
@@ -754,7 +731,7 @@
                       },
                       "parameters": [
                         "PlayerCharacter",
-                        "\"MB1HoldTime\""
+                        "\"FlapTimer\""
                       ]
                     },
                     {
@@ -803,7 +780,7 @@
                         "PlayerCharacter",
                         "Physics2",
                         "=",
-                        "min(PlayerCharacter.ObjectTimerElapsedTime(\"MB1HoldTime\"), PlayerCharacter. MaximumCharge) * -2500"
+                        "min(PlayerCharacter.ObjectTimerElapsedTime(\"FlapTimer\"), PlayerCharacter. MaximumCharge) * -1500"
                       ]
                     },
                     {
@@ -882,218 +859,104 @@
                 }
               ],
               "parameters": []
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Swimming",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "TODO: Refine water mechanics\n- Buoyancy is prone to breaking if physics behavior on PlayerCharacter is changed and when dealing with extreme forces\n- Could include an upgrade to lower the effect of this somehow?\n- Momentum decrease should be adjusted too"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "PlayerCharacter",
-                        "Water",
-                        "",
-                        "",
-                        "no"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Physics2::ApplyForce"
-                      },
-                      "parameters": [
-                        "PlayerCharacter",
-                        "Physics2",
-                        "0",
-                        "-175",
-                        "PlayerCharacter.Physics2::MassCenterX()",
-                        "PlayerCharacter.Physics2::MassCenterY()"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "PlayerCharacter",
-                        "Water",
-                        "",
-                        "",
-                        "no"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "MouseButtonFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Right\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "PlayerCharacter",
-                        "Momentum",
-                        "/",
-                        "1.015"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "MouseButtonFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Right\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "PlayerCharacter",
-                        "Water",
-                        "",
-                        "",
-                        "no"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "PlayerCharacter",
-                        "Momentum",
-                        "<=",
-                        "500"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "PlayerCharacter",
-                        "Momentum",
-                        "*",
-                        "1.015"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "parameters": []
             }
           ],
           "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Levels",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "PlayerCharacter",
+                    "Grub",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Grub",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "grubs",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "distanceTraveled",
+                    "=",
+                    "floor(PlayerCharacter.X()/20)"
+                  ]
+                }
               ]
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "AddForceXY"
-              },
-              "parameters": [
-                "PlayerCharacter",
-                "PlayerCharacter.Momentum",
-                "0",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "PlayerCharacter",
-                "Momentum",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "ResetObjectTimer"
-              },
-              "parameters": [
-                "PlayerCharacter",
-                "\"MB1HoldTime\""
-              ]
-            }
-          ]
+          "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "UI",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "SpeedDisplay",
-                "Text",
-                "=",
-                "ToString(PlayerCharacter.Physics2::LinearVelocityY())"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "UI",
+                    "Text",
+                    "=",
+                    "\"Distance: \" + ToString(distanceTraveled) + NewLine() + \"Grubs: \" + ToString(grubs)"
+                  ]
+                }
               ]
             }
-          ]
+          ],
+          "parameters": []
         }
       ],
       "layers": [
@@ -1176,6 +1039,59 @@
               "width": 0
             }
           ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "UI",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
           "effects": [
             {
               "effectType": "Scene3D::HemisphereLight",
