@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 244,
+    "build": 245,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -129,6 +129,26 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/GDevelop examples/Platformer/Font/349e61a855adefea40c789fda27ec8fb8664af49c28d6495da8a56dba40c3704_PTSans-Bold.ttf",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "file": "assets/flap.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\flap.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/BackgroundNoise.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\BackgroundNoise.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -629,6 +649,33 @@
       },
       "events": [
         {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets\\BackgroundNoise.ogg",
+                "yes",
+                "75",
+                ""
+              ]
+            }
+          ]
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
@@ -769,6 +816,18 @@
                         "False",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\flap.ogg",
+                        "",
+                        "100",
+                        "RandomFloatInRange(-1.25, 1.25)"
+                      ]
                     }
                   ],
                   "events": [
@@ -796,8 +855,8 @@
                           "parameters": [
                             "PlayerCharacter",
                             "Physics2",
-                            "*",
-                            "1.25"
+                            "-",
+                            "500"
                           ]
                         }
                       ]
