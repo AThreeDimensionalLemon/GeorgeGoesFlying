@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 244,
+    "build": 245,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -368,6 +368,26 @@
         "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
         "name": "S_GroundPlaceholder",
         "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/EatGrub.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\EatGrub.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/LevelEndSound.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\LevelEndSound.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": false
       }
     ],
@@ -1704,6 +1724,18 @@
                     "+",
                     "1"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\EatGrub.ogg",
+                    "",
+                    "100",
+                    "RandomFloatInRange(-1.25, 1.25)"
+                  ]
                 }
               ]
             },
@@ -1783,6 +1815,18 @@
                     "Physics2",
                     "=",
                     "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\LevelEndSound.ogg",
+                    "",
+                    "100",
+                    ""
                   ]
                 }
               ],
