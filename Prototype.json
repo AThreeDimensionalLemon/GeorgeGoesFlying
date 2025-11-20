@@ -456,6 +456,14 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/05b0c1364a92b436b86ca819e66b63480d1bc2fb399f6c0cf8bffbf8199ccc2a_CantoraOne-Regular.ttf",
           "name": "CantoraOne-Regular.ttf"
         }
+      },
+      {
+        "file": "assets/assets_assets_Placeholder.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\assets_Placeholder",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -478,17 +486,17 @@
         {
           "name": "flapPower",
           "type": "number",
-          "value": 10
+          "value": 1
         },
         {
           "name": "gliding",
           "type": "number",
-          "value": 25
+          "value": 1
         },
         {
           "name": "speed",
           "type": "number",
-          "value": 25
+          "value": 1
         }
       ]
     }
@@ -514,7 +522,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.2006974131454977,
+        "zoomFactor": 0.5800155239904875,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -1500,16 +1508,17 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "assets\\assets_Placeholder",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\assets_Placeholder.png",
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\assets_Placeholder",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
