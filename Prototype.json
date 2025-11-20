@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 244,
+    "build": 245,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -537,6 +537,11 @@
           "name": "grubs",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "nextElement",
+          "type": "number",
+          "value": 20
         }
       ],
       "instances": [
@@ -699,202 +704,6 @@
           "width": 305,
           "x": 1520,
           "y": -128,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 5,
-          "height": 305,
-          "keepRatio": true,
-          "layer": "",
-          "name": "AirCurrent",
-          "persistentUuid": "13da1141-fe4c-4324-92a3-04ff42a3b849",
-          "width": 305,
-          "x": 2211,
-          "y": -136,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "e59da6df-06e4-4583-bd90-21017bb8d41a",
-          "width": 0,
-          "x": 2519,
-          "y": -194,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "01bcfd47-ae35-448e-b901-79e58fad25ce",
-          "width": 0,
-          "x": 2773,
-          "y": -336,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "7ec86794-921b-4f59-80c4-38387fa1133a",
-          "width": 0,
-          "x": 3120,
-          "y": -230,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "025cec66-52a3-4c0c-b561-0ef0bef1ae9b",
-          "width": 0,
-          "x": 3239,
-          "y": -354,
-          "zOrder": 9,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 5,
-          "height": 305,
-          "keepRatio": true,
-          "layer": "",
-          "name": "AirCurrent",
-          "persistentUuid": "3696cbed-1fa6-4b71-95a7-e5c97e5017e8",
-          "width": 305,
-          "x": 2836,
-          "y": -138,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 5,
-          "height": 305,
-          "keepRatio": true,
-          "layer": "",
-          "name": "AirCurrent",
-          "persistentUuid": "5cd5f6a9-6fea-46f5-973b-f58bb549f5f7",
-          "width": 305,
-          "x": 3525,
-          "y": -127,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "ee33236a-5bf5-49fc-987e-8b02a59acee6",
-          "width": 0,
-          "x": 3833,
-          "y": -185,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "3bafa142-fd28-4b2f-a8e5-bd3fa04e233e",
-          "width": 0,
-          "x": 4087,
-          "y": -327,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "0f097def-4785-47b4-902b-deba57774da8",
-          "width": 0,
-          "x": 4434,
-          "y": -221,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "d2a550da-3742-438e-aefd-32ee8c492a57",
-          "width": 0,
-          "x": 4553,
-          "y": -345,
-          "zOrder": 9,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 5,
-          "height": 305,
-          "keepRatio": true,
-          "layer": "",
-          "name": "AirCurrent",
-          "persistentUuid": "e086066c-eb7c-4df8-a677-925e2992bd40",
-          "width": 305,
-          "x": 4150,
-          "y": -129,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -2405,6 +2214,74 @@
                       ]
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Element generator"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "distanceTraveled",
+                    ">=",
+                    "nextElement"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Grub",
+                    "2000",
+                    "RandomInRange(-675, -200)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "nextElement",
+                    "+",
+                    "RandomInRange(10, 25)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "if (Math.random() < 0.2) {\r",
+                    "    const instance = runtimeScene.createObject(\"AirCurrent\");\r",
+                    "    instance.setLayer(\"BaseLayer\");\r",
+                    "    instance.setPosition(2000, -128);\r",
+                    "    instance.setHeight(350);\r",
+                    "    instance.setWidth(350);\r",
+                    "}"
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
                 }
               ]
             }
