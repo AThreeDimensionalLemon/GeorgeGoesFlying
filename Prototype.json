@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 245,
+    "build": 244,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -522,7 +522,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5800155239904875,
+        "zoomFactor": 0.43034038022076665,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -1694,16 +1694,63 @@
                     "George",
                     "\"FlapTimer\""
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Grub",
+              "conditions": [
                 {
                   "type": {
-                    "value": "Physics2::LinearVelocityX"
+                    "value": "BooleanObjectVariable"
                   },
                   "parameters": [
                     "George",
-                    "Physics2",
-                    "=",
-                    "George.FlightSpeed"
+                    "IsLevelEnding",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Grub",
+                    "-",
+                    "George.FlightSpeed * TimeDelta()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "AirCurrent",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "George",
+                    "IsLevelEnding",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "AirCurrent",
+                    "-",
+                    "George.FlightSpeed * TimeDelta()"
                   ]
                 }
               ]
@@ -2086,7 +2133,19 @@
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "George",
+                    "IsLevelEnding",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
               "actions": [
                 {
                   "type": {
@@ -2094,8 +2153,8 @@
                   },
                   "parameters": [
                     "distanceTraveled",
-                    "=",
-                    "floor(George.X() / 20)"
+                    "+",
+                    "George.FlightSpeed * TimeDelta() / 20"
                   ]
                 }
               ]
@@ -2129,17 +2188,6 @@
                 }
               ],
               "actions": [
-                {
-                  "type": {
-                    "value": "Physics2::LinearVelocityX"
-                  },
-                  "parameters": [
-                    "George",
-                    "Physics2",
-                    "=",
-                    "0"
-                  ]
-                },
                 {
                   "type": {
                     "value": "Physics2::LinearVelocityY"
@@ -2234,92 +2282,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "RestartBlock",
-                    "George",
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreX"
-                  },
-                  "parameters": [
-                    "George",
-                    "=",
-                    "-1280"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Grub",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Grub",
-                    "481",
-                    "498",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Grub",
-                    "646",
-                    "315",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Grub",
-                    "943",
-                    "448",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Grub",
-                    "1137",
-                    "227",
-                    ""
-                  ]
-                }
-              ]
             }
           ],
           "parameters": []
@@ -2345,7 +2307,7 @@
                     "UI",
                     "Text",
                     "=",
-                    "\"Distance: \" + ToString(distanceTraveled) + NewLine() + \"Grubs: \" + ToString(grubs)"
+                    "\"Distance: \" + ToString(floor(distanceTraveled)) + NewLine() + \"Grubs: \" + ToString(grubs)"
                   ]
                 },
                 {
@@ -3437,12 +3399,11 @@
                     },
                     {
                       "type": {
-                        "inverted": true,
                         "value": "NumberVariable"
                       },
                       "parameters": [
                         "totalGrubs",
-                        ">=",
+                        "<",
                         "GlidingButton.Cost"
                       ]
                     }
@@ -3548,12 +3509,11 @@
                     },
                     {
                       "type": {
-                        "inverted": true,
                         "value": "NumberVariable"
                       },
                       "parameters": [
                         "totalGrubs",
-                        ">=",
+                        "<",
                         "FlapPowerButton.Cost"
                       ]
                     }
@@ -3659,12 +3619,11 @@
                     },
                     {
                       "type": {
-                        "inverted": true,
                         "value": "NumberVariable"
                       },
                       "parameters": [
                         "totalGrubs",
-                        ">=",
+                        "<",
                         "SpeedButton.Cost"
                       ]
                     }
