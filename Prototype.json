@@ -434,12 +434,12 @@
           "value": 0
         },
         {
-          "name": "flightSpeed",
+          "name": "gliding",
           "type": "number",
           "value": 0
         },
         {
-          "name": "gliding",
+          "name": "speed",
           "type": "number",
           "value": 0
         }
@@ -2270,7 +2270,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "GlidingLevelText",
+          "name": "GlidingText",
           "persistentUuid": "c08d6ca9-2bbb-4359-9d00-0bd45cf0d318",
           "width": 0,
           "x": 132,
@@ -2286,12 +2286,62 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "GlidingCostText",
-          "persistentUuid": "f3d07469-d9f0-4f0f-8bec-c8c9cde61424",
+          "name": "FlapPowerText",
+          "persistentUuid": "75393411-8391-499a-9885-89e91736f300",
           "width": 0,
-          "x": 134,
-          "y": 668,
+          "x": 691,
+          "y": 611,
           "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "SpeedText",
+          "persistentUuid": "d59c90c8-622b-44d4-8d69-4c2d7ced14c6",
+          "width": 0,
+          "x": 1218,
+          "y": 619,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 330,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FlapPowerButton",
+          "persistentUuid": "2c6096d2-1257-4fb3-8a7f-3a1728547cd6",
+          "width": 330,
+          "x": 688,
+          "y": 258,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 330,
+          "keepRatio": true,
+          "layer": "",
+          "name": "SpeedButton",
+          "persistentUuid": "f514b612-a686-4781-98fd-ff8b963b543d",
+          "width": 330,
+          "x": 1262,
+          "y": 262,
+          "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2484,14 +2534,14 @@
           "assetStoreId": "",
           "bold": false,
           "italic": false,
-          "name": "GlidingLevelText",
+          "name": "GlidingText",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "error: gliding not retreived!",
+          "string": "error: gliding information not retreived!",
           "font": "",
           "textAlignment": "left",
           "characterSize": 48,
@@ -2514,7 +2564,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "error: gliding not retreived!",
+            "text": "error: gliding information not retreived!",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -2527,14 +2577,14 @@
           "assetStoreId": "",
           "bold": false,
           "italic": false,
-          "name": "GlidingCostText",
+          "name": "FlapPowerText",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "error: cost not retreived!",
+          "string": "error: flapPower information not retreived!",
           "font": "",
           "textAlignment": "left",
           "characterSize": 48,
@@ -2557,7 +2607,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "error: cost not retreived!",
+            "text": "error: flapPower information not retreived!",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -2565,6 +2615,241 @@
             "lineHeight": 0,
             "color": "0;0;0"
           }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "SpeedText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "error: speed information not retreived!",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 48,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "error: speed information not retreived!",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 48,
+            "lineHeight": 0,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "FlapPowerButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Cost",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            },
+            {
+              "name": "ButtonScaleTween",
+              "type": "ButtonStates::ButtonScaleTween",
+              "Scale": "Scale",
+              "ButtonFSM": "ButtonFSM",
+              "Tween": "Tween",
+              "IdleScale": 5,
+              "FocusedScale": 5.25,
+              "FadeInDuration": 0.1,
+              "FadeOutDuration": 0.2,
+              "PressedScale": 4.75,
+              "FadeInEasing": "easeInOutQuad",
+              "FadeOutEasing": "easeInOutQuad",
+              "PreviousState": "Idle"
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Placeholder.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 14,
+                            "y": 16
+                          },
+                          {
+                            "x": 46,
+                            "y": 16
+                          },
+                          {
+                            "x": 46,
+                            "y": 42
+                          },
+                          {
+                            "x": 14,
+                            "y": 42
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "SpeedButton",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Cost",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            },
+            {
+              "name": "ButtonScaleTween",
+              "type": "ButtonStates::ButtonScaleTween",
+              "Scale": "Scale",
+              "ButtonFSM": "ButtonFSM",
+              "Tween": "Tween",
+              "IdleScale": 5,
+              "FocusedScale": 5.25,
+              "FadeInDuration": 0.1,
+              "FadeOutDuration": 0.2,
+              "PressedScale": 4.75,
+              "FadeInEasing": "easeInOutQuad",
+              "FadeOutEasing": "easeInOutQuad",
+              "PreviousState": "Idle"
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Placeholder.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 14,
+                            "y": 16
+                          },
+                          {
+                            "x": 46,
+                            "y": 16
+                          },
+                          {
+                            "x": 46,
+                            "y": 42
+                          },
+                          {
+                            "x": 14,
+                            "y": 42
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -2577,10 +2862,19 @@
                 "objectName": "GlidingButton"
               },
               {
-                "objectName": "GlidingLevelText"
+                "objectName": "FlapPowerButton"
               },
               {
-                "objectName": "GlidingCostText"
+                "objectName": "SpeedButton"
+              },
+              {
+                "objectName": "GlidingText"
+              },
+              {
+                "objectName": "FlapPowerText"
+              },
+              {
+                "objectName": "SpeedText"
               }
             ]
           },
@@ -2603,7 +2897,55 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Sets costs of upgrades based on existing level\n- Definetly needs refining based on how common grubs should be\n- I'll use zero-based indexing for future-proofing any mathematical needs"
+          "comment": "Sets costs\n- Definetly needs refining based on how common grubs should be\n- I'll use zero-based indexing for future-proofing any mathematical needs"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "GlidingButton",
+                "Cost",
+                "=",
+                "(upgrades.gliding + 1) * 2"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "FlapPowerButton",
+                "Cost",
+                "=",
+                "(upgrades.flapPower + 1) * 3"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "SpeedButton",
+                "Cost",
+                "=",
+                "(upgrades.speed + 1)"
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -2631,13 +2973,13 @@
             },
             {
               "type": {
-                "value": "SetNumberObjectVariable"
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "GlidingButton",
-                "Cost",
+                "GlidingText",
+                "Text",
                 "=",
-                "(upgrades.gliding + 1) * 2"
+                "\"Level: \" + ToString(upgrades.gliding) + NewLine() + \"Cost: \" + ToString(GlidingButton.Cost)"
               ]
             },
             {
@@ -2645,10 +2987,10 @@
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "GlidingLevelText",
+                "FlapPowerText",
                 "Text",
                 "=",
-                "\"Level: \" + ToString(upgrades.gliding)"
+                "\"Level: \" + ToString(upgrades.flapPower) + NewLine() + \"Cost: \" + ToString(FlapPowerButton.Cost)"
               ]
             },
             {
@@ -2656,10 +2998,10 @@
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "GlidingCostText",
+                "SpeedText",
                 "Text",
                 "=",
-                "\"Cost: \" + ToString(GlidingButton.Cost)"
+                "\"Level: \" + ToString(upgrades.speed) + NewLine() + \"Cost: \" + ToString(SpeedButton.Cost)"
               ]
             }
           ]
@@ -2683,7 +3025,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Never thought I'd yearn for if-else statements and OOP"
+              "comment": "Never thought I'd yearn for if-else statements and OOP. Don't think I can implement one in time for the deadline either though."
             },
             {
               "colorB": 228,
@@ -2727,7 +3069,7 @@
                         "",
                         "assets\\UpgradeSuccess.wav",
                         "",
-                        "75",
+                        "60",
                         "1"
                       ]
                     },
@@ -2778,21 +3120,10 @@
                         "value": "TextContainerCapability::TextContainerBehavior::SetValue"
                       },
                       "parameters": [
-                        "GlidingLevelText",
+                        "GlidingText",
                         "Text",
                         "=",
-                        "\"Level: \" + ToString(upgrades.gliding)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "GlidingCostText",
-                        "Text",
-                        "=",
-                        "\"Cost: \" + ToString(GlidingButton.Cost)"
+                        "\"Level: \" + ToString(upgrades.gliding) + NewLine() + \"Cost: \" + ToString(GlidingButton.Cost)"
                       ]
                     }
                   ]
@@ -2831,7 +3162,7 @@
                         "",
                         "assets\\UpgradeFail.wav",
                         "",
-                        "75",
+                        "60",
                         "1"
                       ]
                     }
@@ -2845,14 +3176,285 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "",
+              "name": "Flap Power",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ButtonStates::ButtonFSM::IsClicked"
+                      },
+                      "parameters": [
+                        "FlapPowerButton",
+                        "ButtonFSM",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "totalGrubs",
+                        ">=",
+                        "FlapPowerButton.Cost"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\UpgradeSuccess.wav",
+                        "",
+                        "60",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "totalGrubs",
+                        "-",
+                        "FlapPowerButton.Cost"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "upgrades.flapPower",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "FlapPowerButton",
+                        "Cost",
+                        "=",
+                        "(upgrades.flapPower + 1) * 3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "GrubCount",
+                        "Text",
+                        "=",
+                        "ToString(totalGrubs)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "FlapPowerText",
+                        "Text",
+                        "=",
+                        "\"Level: \" + ToString(upgrades.flapPower) + NewLine() + \"Cost: \" + ToString(FlapPowerButton.Cost)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ButtonStates::ButtonFSM::IsClicked"
+                      },
+                      "parameters": [
+                        "FlapPowerButton",
+                        "ButtonFSM",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "totalGrubs",
+                        ">=",
+                        "FlapPowerButton.Cost"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\UpgradeFail.wav",
+                        "",
+                        "60",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Speed",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ButtonStates::ButtonFSM::IsClicked"
+                      },
+                      "parameters": [
+                        "SpeedButton",
+                        "ButtonFSM",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "totalGrubs",
+                        ">=",
+                        "SpeedButton.Cost"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\UpgradeSuccess.wav",
+                        "",
+                        "60",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "totalGrubs",
+                        "-",
+                        "SpeedButton.Cost"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "upgrades.speed",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "SpeedButton",
+                        "Cost",
+                        "=",
+                        "(upgrades.speed + 1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "GrubCount",
+                        "Text",
+                        "=",
+                        "ToString(totalGrubs)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "SpeedText",
+                        "Text",
+                        "=",
+                        "\"Level: \" + ToString(upgrades.speed) + NewLine() + \"Cost: \" + ToString(SpeedButton.Cost)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ButtonStates::ButtonFSM::IsClicked"
+                      },
+                      "parameters": [
+                        "SpeedButton",
+                        "ButtonFSM",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "totalGrubs",
+                        ">=",
+                        "SpeedButton.Cost"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\UpgradeFail.wav",
+                        "",
+                        "60",
+                        "1"
+                      ]
+                    }
+                  ]
                 }
               ],
               "parameters": []
