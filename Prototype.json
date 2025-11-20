@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 244,
+    "build": 245,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -478,17 +478,17 @@
         {
           "name": "flapPower",
           "type": "number",
-          "value": 1
+          "value": 10
         },
         {
           "name": "gliding",
           "type": "number",
-          "value": 1
+          "value": 25
         },
         {
           "name": "speed",
           "type": "number",
-          "value": 1
+          "value": 25
         }
       ]
     }
@@ -514,7 +514,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.27962265218393806,
+        "zoomFactor": 0.2006974131454977,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -623,8 +623,8 @@
           "layer": "",
           "name": "Ground",
           "persistentUuid": "731691da-a76d-4add-8aff-14059c7d4d59",
-          "width": 3184,
-          "x": 0,
+          "width": 6260,
+          "x": -1502,
           "y": 828,
           "zOrder": 6,
           "numberProperties": [],
@@ -692,6 +692,23 @@
           "x": 582,
           "y": 525,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1654,
+          "keepRatio": true,
+          "layer": "",
+          "name": "RestartBlock",
+          "persistentUuid": "26075e58-407c-403b-9562-87d83b2d4729",
+          "width": 112,
+          "x": 2154,
+          "y": -783,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1471,6 +1488,66 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "RestartBlock",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\assets_Placeholder.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -1493,6 +1570,9 @@
           },
           {
             "objectName": "Ground"
+          },
+          {
+            "objectName": "RestartBlock"
           }
         ]
       },
@@ -2142,6 +2222,92 @@
                         ""
                       ]
                     }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "RestartBlock",
+                    "George",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "George",
+                    "=",
+                    "-1280"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Grub",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Grub",
+                    "481",
+                    "498",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Grub",
+                    "646",
+                    "315",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Grub",
+                    "943",
+                    "448",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Grub",
+                    "1137",
+                    "227",
+                    ""
                   ]
                 }
               ]
