@@ -486,17 +486,17 @@
         {
           "name": "flapPower",
           "type": "number",
-          "value": 10
+          "value": 1
         },
         {
           "name": "gliding",
           "type": "number",
-          "value": 50
+          "value": 1
         },
         {
           "name": "speed",
           "type": "number",
-          "value": 50
+          "value": 1
         }
       ]
     }
