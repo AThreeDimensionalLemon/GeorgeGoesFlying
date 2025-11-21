@@ -486,17 +486,17 @@
         {
           "name": "flapPower",
           "type": "number",
-          "value": 1
+          "value": 10
         },
         {
           "name": "gliding",
           "type": "number",
-          "value": 1
+          "value": 50
         },
         {
           "name": "speed",
           "type": "number",
-          "value": 1
+          "value": 50
         }
       ]
     }
@@ -1584,6 +1584,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Movement",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2096,6 +2097,7 @@
               "comment": "Freeze motion upon hitting ground"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -2218,72 +2220,148 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Element generator"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Elements Handler",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
                 {
-                  "type": {
-                    "value": "NumberVariable"
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
                   },
-                  "parameters": [
-                    "distanceTraveled",
-                    ">=",
-                    "nextElement"
-                  ]
-                }
-              ],
-              "actions": [
+                  "comment": "Generator"
+                },
                 {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Grub",
-                    "2000",
-                    "RandomInRange(-675, -200)",
-                    ""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "distanceTraveled",
+                        ">=",
+                        "nextElement"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Grub",
+                        "2000",
+                        "RandomInRange(-675, -200)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "nextElement",
+                        "+",
+                        "RandomInRange(10, 25)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": [
+                        "if (Math.random() < 0.2) {\r",
+                        "    const instance = runtimeScene.createObject(\"AirCurrent\");\r",
+                        "    instance.setLayer(\"BaseLayer\");\r",
+                        "    instance.setPosition(2000, -128);\r",
+                        "    instance.setHeight(350);\r",
+                        "    instance.setWidth(350);\r",
+                        "}"
+                      ],
+                      "parameterObjects": "",
+                      "useStrict": true,
+                      "eventsSheetExpanded": false
+                    }
                   ]
                 },
                 {
-                  "type": {
-                    "value": "SetNumberVariable"
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
                   },
-                  "parameters": [
-                    "nextElement",
-                    "+",
-                    "RandomInRange(10, 25)"
+                  "comment": "Unloader"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "AirCurrent",
+                        "<=",
+                        "-600"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "AirCurrent",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "Grub",
+                        "<=",
+                        "-600"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Grub",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": [
-                    "if (Math.random() < 0.2) {\r",
-                    "    const instance = runtimeScene.createObject(\"AirCurrent\");\r",
-                    "    instance.setLayer(\"BaseLayer\");\r",
-                    "    instance.setPosition(2000, -128);\r",
-                    "    instance.setHeight(350);\r",
-                    "    instance.setWidth(350);\r",
-                    "}"
-                  ],
-                  "parameterObjects": "",
-                  "useStrict": true,
-                  "eventsSheetExpanded": false
-                }
-              ]
+              "parameters": []
             }
           ],
           "parameters": []
@@ -2293,6 +2371,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "UI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
