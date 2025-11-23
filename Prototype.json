@@ -622,7 +622,7 @@
         {
           "name": "flapPower",
           "type": "number",
-          "value": 10
+          "value": 1
         },
         {
           "name": "gliding",
@@ -4264,18 +4264,6 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Never thought I'd yearn for if-else statements and OOP. Don't think I can implement one in time for the deadline either though."
-            },
-            {
               "colorB": 228,
               "colorG": 176,
               "colorR": 74,
@@ -4317,7 +4305,7 @@
                         "",
                         "assets\\UpgradeFail.wav",
                         "",
-                        "60",
+                        "35",
                         "1"
                       ]
                     }
@@ -4356,7 +4344,7 @@
                         "",
                         "assets\\UpgradeSuccess.wav",
                         "",
-                        "60",
+                        "35",
                         "1"
                       ]
                     },
@@ -4427,7 +4415,7 @@
                         "",
                         "assets\\UpgradeFail.wav",
                         "",
-                        "60",
+                        "35",
                         "1"
                       ]
                     }
@@ -4466,7 +4454,7 @@
                         "",
                         "assets\\UpgradeSuccess.wav",
                         "",
-                        "60",
+                        "35",
                         "1"
                       ]
                     },
@@ -4537,7 +4525,7 @@
                         "",
                         "assets\\UpgradeFail.wav",
                         "",
-                        "60",
+                        "35",
                         "1"
                       ]
                     }
@@ -4576,7 +4564,7 @@
                         "",
                         "assets\\UpgradeSuccess.wav",
                         "",
-                        "60",
+                        "35",
                         "1"
                       ]
                     },
