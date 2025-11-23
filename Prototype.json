@@ -544,6 +544,62 @@
         "name": "assets\\penguinspriteshop.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/shopupgradeglide.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\shopupgradeglide.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/shopupgradeflap.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\shopupgradeflap.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/shopupgradespeed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\shopupgradespeed.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/windcurrent.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\windcurrent.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/grubbugfly1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\grubbugfly1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/grubbugfly2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\grubbugfly2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/cementfloortile.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\cementfloortile.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -602,7 +658,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.1941505911274083,
+        "zoomFactor": 0.2006974131454981,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -677,13 +733,14 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "Grub",
           "persistentUuid": "19a5557d-de2b-4587-b96a-082fc1dfeb83",
-          "width": 0,
+          "width": 64,
           "x": 1203,
           "y": -184,
           "zOrder": 4,
@@ -710,15 +767,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 1,
-          "height": 850,
-          "keepRatio": true,
+          "depth": 0.9377289377289377,
+          "height": 512,
           "layer": "",
           "name": "Ground",
           "persistentUuid": "731691da-a76d-4add-8aff-14059c7d4d59",
-          "width": 1923,
-          "x": -1,
-          "y": 828,
+          "width": 2304,
+          "x": -128,
+          "y": 600,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -726,13 +782,14 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "Grub",
           "persistentUuid": "1bece4c9-1ff8-4402-947b-f1606e3d6bf6",
-          "width": 0,
+          "width": 64,
           "x": 1457,
           "y": -326,
           "zOrder": 7,
@@ -742,13 +799,14 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "Grub",
           "persistentUuid": "021b3f0b-f576-4c92-b788-ea9979b71cd4",
-          "width": 0,
+          "width": 64,
           "x": 1804,
           "y": -220,
           "zOrder": 8,
@@ -758,13 +816,14 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "Grub",
           "persistentUuid": "c3a83354-5e1f-40f7-9e11-93690015e1d8",
-          "width": 0,
+          "width": 64,
           "x": 1923,
           "y": -344,
           "zOrder": 9,
@@ -1376,7 +1435,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "S_Current",
+                      "image": "assets\\windcurrent.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1392,20 +1451,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 4,
-                            "y": 7
+                            "x": 265,
+                            "y": 106
                           },
                           {
-                            "x": 61,
-                            "y": 7
+                            "x": 1624,
+                            "y": 106
                           },
                           {
-                            "x": 61,
-                            "y": 60
+                            "x": 1624,
+                            "y": 1789
                           },
                           {
-                            "x": 4,
-                            "y": 60
+                            "x": 265,
+                            "y": 1789
                           }
                         ]
                       ]
@@ -1472,6 +1531,7 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Grub",
+          "preScale": 0.035,
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -1483,13 +1543,13 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
+                  "looping": true,
                   "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "S_GrubPlaceholder",
+                      "image": "assets\\grubbugfly1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1505,20 +1565,56 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 0
+                            "x": 550,
+                            "y": 607
                           },
                           {
-                            "x": 64,
-                            "y": 0
+                            "x": 1397,
+                            "y": 607
                           },
                           {
-                            "x": 64,
-                            "y": 64
+                            "x": 1397,
+                            "y": 1158
                           },
                           {
-                            "x": 0,
-                            "y": 64
+                            "x": 550,
+                            "y": 1158
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\grubbugfly2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 550,
+                            "y": 607
+                          },
+                          {
+                            "x": 1397,
+                            "y": 607
+                          },
+                          {
+                            "x": 1397,
+                            "y": 1158
+                          },
+                          {
+                            "x": 550,
+                            "y": 1158
                           }
                         ]
                       ]
@@ -1954,7 +2050,7 @@
           "assetStoreId": "",
           "height": 32,
           "name": "Ground",
-          "texture": "S_GroundPlaceholder",
+          "texture": "assets\\cementfloortile.png",
           "type": "TiledSpriteObject::TiledSprite",
           "width": 32,
           "variables": [],
@@ -2149,6 +2245,61 @@
                   },
                   "parameters": [
                     "AirCurrent",
+                    "-",
+                    "George.FlightSpeed * TimeDelta()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Ground",
+                    "<=",
+                    "-256"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Ground",
+                    "=",
+                    "-128"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "George",
+                    "IsLevelEnding",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Ground",
                     "-",
                     "George.FlightSpeed * TimeDelta()"
                   ]
@@ -2599,9 +2750,24 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         },
         {
           "colorB": 228,
@@ -3311,7 +3477,7 @@
           "width": 330,
           "x": 123,
           "y": 258,
-          "zOrder": 1,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3373,8 +3539,8 @@
           "name": "FlapPowerText",
           "persistentUuid": "75393411-8391-499a-9885-89e91736f300",
           "width": 0,
-          "x": 579,
-          "y": 616,
+          "x": 959,
+          "y": 613,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -3389,7 +3555,7 @@
           "name": "SpeedText",
           "persistentUuid": "d59c90c8-622b-44d4-8d69-4c2d7ced14c6",
           "width": 0,
-          "x": 1021,
+          "x": 536,
           "y": 611,
           "zOrder": 6,
           "numberProperties": [],
@@ -3399,15 +3565,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 0,
-          "height": 330,
-          "keepRatio": true,
+          "depth": 1,
+          "height": 500,
           "layer": "",
           "name": "FlapPowerButton",
           "persistentUuid": "2c6096d2-1257-4fb3-8a7f-3a1728547cd6",
-          "width": 330,
-          "x": 576,
-          "y": 263,
+          "width": 500,
+          "x": 933,
+          "y": 150,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -3416,15 +3581,15 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 0,
-          "height": 330,
+          "depth": 0.9917355371900827,
+          "height": 360,
           "keepRatio": true,
           "layer": "",
           "name": "SpeedButton",
           "persistentUuid": "f514b612-a686-4781-98fd-ff8b963b543d",
-          "width": 330,
-          "x": 1065,
-          "y": 254,
+          "width": 360,
+          "x": 518,
+          "y": 235,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -3459,7 +3624,7 @@
           "width": 943,
           "x": 985,
           "y": 166,
-          "zOrder": 10,
+          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3497,11 +3662,11 @@
               "Scale": "Scale",
               "ButtonFSM": "ButtonFSM",
               "Tween": "Tween",
-              "IdleScale": 5,
-              "FocusedScale": 5.25,
+              "IdleScale": 0.165,
+              "FocusedScale": 0.19,
               "FadeInDuration": 0.1,
               "FadeOutDuration": 0.2,
-              "PressedScale": 4.75,
+              "PressedScale": 0.14,
               "FadeInEasing": "easeInOutQuad",
               "FadeOutEasing": "easeInOutQuad",
               "PreviousState": "Idle"
@@ -3522,7 +3687,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\Placeholder.png",
+                      "image": "assets\\shopupgradeglide.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3538,20 +3703,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 14,
-                            "y": 16
+                            "x": 49,
+                            "y": 202
                           },
                           {
-                            "x": 46,
-                            "y": 16
+                            "x": 1933,
+                            "y": 202
                           },
                           {
-                            "x": 46,
-                            "y": 42
+                            "x": 1933,
+                            "y": 1677
                           },
                           {
-                            "x": 14,
-                            "y": 42
+                            "x": 49,
+                            "y": 1677
                           }
                         ]
                       ]
@@ -3808,11 +3973,11 @@
               "Scale": "Scale",
               "ButtonFSM": "ButtonFSM",
               "Tween": "Tween",
-              "IdleScale": 5,
-              "FocusedScale": 5.25,
+              "IdleScale": 0.25,
+              "FocusedScale": 0.275,
               "FadeInDuration": 0.1,
               "FadeOutDuration": 0.2,
-              "PressedScale": 4.75,
+              "PressedScale": 0.225,
               "FadeInEasing": "easeInOutQuad",
               "FadeOutEasing": "easeInOutQuad",
               "PreviousState": "Idle"
@@ -3833,7 +3998,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\Placeholder.png",
+                      "image": "assets\\shopupgradeflap.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3849,20 +4014,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 14,
-                            "y": 16
+                            "x": 179,
+                            "y": 407
                           },
                           {
-                            "x": 46,
-                            "y": 16
+                            "x": 1728,
+                            "y": 407
                           },
                           {
-                            "x": 46,
-                            "y": 42
+                            "x": 1728,
+                            "y": 1526
                           },
                           {
-                            "x": 14,
-                            "y": 42
+                            "x": 179,
+                            "y": 1526
                           }
                         ]
                       ]
@@ -3904,11 +4069,11 @@
               "Scale": "Scale",
               "ButtonFSM": "ButtonFSM",
               "Tween": "Tween",
-              "IdleScale": 5,
-              "FocusedScale": 5.25,
+              "IdleScale": 0.18,
+              "FocusedScale": 0.205,
               "FadeInDuration": 0.1,
               "FadeOutDuration": 0.2,
-              "PressedScale": 4.75,
+              "PressedScale": 0.155,
               "FadeInEasing": "easeInOutQuad",
               "FadeOutEasing": "easeInOutQuad",
               "PreviousState": "Idle"
@@ -3929,7 +4094,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\Placeholder.png",
+                      "image": "assets\\shopupgradespeed.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3945,20 +4110,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 14,
-                            "y": 16
+                            "x": 283,
+                            "y": 48
                           },
                           {
-                            "x": 46,
-                            "y": 16
+                            "x": 1714,
+                            "y": 48
                           },
                           {
-                            "x": 46,
-                            "y": 42
+                            "x": 1714,
+                            "y": 1551
                           },
                           {
-                            "x": 14,
-                            "y": 42
+                            "x": 283,
+                            "y": 1551
                           }
                         ]
                       ]
