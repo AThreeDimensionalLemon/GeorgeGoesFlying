@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "FlightLevel",
   "gdVersion": {
     "build": 245,
     "major": 5,
@@ -622,17 +622,17 @@
         {
           "name": "flapPower",
           "type": "number",
-          "value": 10
+          "value": 1
         },
         {
           "name": "gliding",
           "type": "number",
-          "value": 10
+          "value": 1
         },
         {
           "name": "speed",
           "type": "number",
-          "value": 5
+          "value": 1
         }
       ]
     }
