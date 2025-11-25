@@ -600,6 +600,36 @@
         "name": "assets\\cementfloortile.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/airCurrentBoost.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\airCurrentBoost.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/windCurrentSound.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\windCurrentSound.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/windCurrentSound.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\windCurrentSound.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2594,6 +2624,18 @@
                                 "Physics2",
                                 "*",
                                 "1.25"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "assets\\windCurrentSound.ogg",
+                                "",
+                                "80",
+                                "1"
                               ]
                             }
                           ]
