@@ -630,6 +630,36 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/swimAmbience.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\swimAmbience.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/upSplash.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\upSplash.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/downSplash.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\downSplash.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -3896,6 +3926,11 @@
               "value": 500
             },
             {
+              "name": "IsSubmerged",
+              "type": "boolean",
+              "value": true
+            },
+            {
               "name": "CanFlap",
               "type": "boolean",
               "value": true
@@ -5133,9 +5168,9 @@
               },
               "parameters": [
                 "",
-                "assets\\BackgroundNoise.ogg",
+                "assets\\swimAmbience.mp3",
                 "yes",
-                "75",
+                "60",
                 ""
               ]
             },
@@ -5180,6 +5215,81 @@
                 "=",
                 "log(upgrades.gliding)/10"
               ]
+            },
+            {
+              "type": {
+                "value": "Physics2::Gravity"
+              },
+              "parameters": [
+                "George",
+                "Physics2",
+                "0",
+                "-1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "George",
+                "Water",
+                "Water",
+                "",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "George",
+                "IsSubmerged",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::Gravity"
+              },
+              "parameters": [
+                "George",
+                "Physics2",
+                "0",
+                "-1"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets\\downSplash.mp3",
+                "",
+                "25",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "George",
+                "IsSubmerged",
+                "True",
+                ""
+              ]
             }
           ]
         },
@@ -5198,6 +5308,17 @@
                 "",
                 "no"
               ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "George",
+                "IsSubmerged",
+                "True",
+                ""
+              ]
             }
           ],
           "actions": [
@@ -5211,35 +5332,28 @@
                 "0",
                 "10"
               ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+            },
             {
               "type": {
-                "value": "CollisionNP"
+                "value": "PlaySound"
               },
               "parameters": [
-                "George",
-                "Water",
-                "Water",
                 "",
-                "no"
+                "assets\\upSplash.ogg",
+                "",
+                "20",
+                ""
               ]
-            }
-          ],
-          "actions": [
+            },
             {
               "type": {
-                "value": "Physics2::Gravity"
+                "value": "SetBooleanObjectVariable"
               },
               "parameters": [
                 "George",
-                "Physics2",
-                "0",
-                "-1"
+                "IsSubmerged",
+                "False",
+                ""
               ]
             }
           ]
