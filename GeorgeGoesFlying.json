@@ -658,7 +658,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.2006974131454981,
+        "zoomFactor": 0.3895856273827303,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -847,6 +847,57 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Grub",
+          "persistentUuid": "ac787009-2f2e-4c86-8aba-4369ab2e43a6",
+          "width": 64,
+          "x": 2053,
+          "y": 349,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Grub",
+          "persistentUuid": "85a5e15a-19ff-43b9-84d3-d9c73a234d76",
+          "width": 64,
+          "x": 1429,
+          "y": 427,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Grub",
+          "persistentUuid": "2589970f-ddb9-4577-a5ec-d2d4f032a6b4",
+          "width": 64,
+          "x": 1838,
+          "y": 206,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -886,6 +937,11 @@
               "name": "CanFlap",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "GlidePower",
+              "type": "number",
+              "value": 0
             }
           ],
           "effects": [],
@@ -2124,7 +2180,7 @@
                 "George",
                 "FlightSpeed",
                 "+",
-                "upgrades.speed * 20"
+                "upgrades.speed * 10"
               ]
             },
             {
@@ -2135,17 +2191,17 @@
                 "George",
                 "FlapBoost",
                 "+",
-                "upgrades.flapPower * 100"
+                "upgrades.flapPower * 50"
               ]
             },
             {
               "type": {
-                "value": "Physics2::GravityScale"
+                "value": "SetNumberObjectVariable"
               },
               "parameters": [
                 "George",
-                "Physics2",
-                "-",
+                "GlidePower",
+                "=",
                 "log(upgrades.gliding)/10"
               ]
             }
@@ -2189,64 +2245,6 @@
                   "parameters": [
                     "George",
                     "\"FlapTimer\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "Grub",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "George",
-                    "IsLevelEnding",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreX"
-                  },
-                  "parameters": [
-                    "Grub",
-                    "-",
-                    "George.FlightSpeed * TimeDelta()"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "AirCurrent",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "George",
-                    "IsLevelEnding",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreX"
-                  },
-                  "parameters": [
-                    "AirCurrent",
-                    "-",
-                    "George.FlightSpeed * TimeDelta()"
                   ]
                 }
               ]
@@ -2304,6 +2302,42 @@
                     "George.FlightSpeed * TimeDelta()"
                   ]
                 }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Grub",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Grub",
+                        "-",
+                        "George.FlightSpeed * TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "AirCurrent",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "AirCurrent",
+                        "-",
+                        "George.FlightSpeed * TimeDelta()"
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -2316,130 +2350,8 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Begin Charging Flap"
-                },
-                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
-                    {
-                      "type": {
-                        "value": "MouseButtonFromTextPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Left\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "George",
-                        "IsCharging",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "George",
-                        "IsLevelEnding",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "George",
-                        "CanFlap",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "George",
-                        "\"FlapTimer\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "George",
-                        "IsCharging",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "UnPauseObjectTimer"
-                      },
-                      "parameters": [
-                        "George",
-                        "\"FlapTimer\""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Release Flap"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "George",
-                        "IsCharging",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MouseButtonFromTextReleased"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Left\""
-                      ]
-                    },
                     {
                       "type": {
                         "value": "BooleanObjectVariable"
@@ -2452,80 +2364,7 @@
                       ]
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Physics2::LinearVelocityY"
-                      },
-                      "parameters": [
-                        "George",
-                        "Physics2",
-                        "=",
-                        "min(min(George.ObjectTimerElapsedTime(\"FlapTimer\"), George.MaximumCharge) * George.FlapBoost * -1, George.Physics2::LinearVelocityY())"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "George",
-                        "IsCharging",
-                        "False",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PlaySound"
-                      },
-                      "parameters": [
-                        "",
-                        "assets\\flap.ogg",
-                        "",
-                        "100",
-                        "RandomFloatInRange(-1.25, 1.25)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "George",
-                        "\"FlapTimer\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PauseObjectTimer"
-                      },
-                      "parameters": [
-                        "George",
-                        "\"FlapTimer\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "George",
-                        "\"FlapDelay\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "George",
-                        "CanFlap",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
+                  "actions": [],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Comment",
@@ -2537,21 +2376,108 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "Boost from Air Currents"
+                      "comment": "Begin Charging Flap"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "CollisionNP"
+                            "value": "MouseButtonFromTextPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Left\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
                           },
                           "parameters": [
                             "George",
-                            "AirCurrent",
-                            "",
-                            "",
+                            "IsCharging",
+                            "False",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "George",
+                            "CanFlap",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "George",
+                            "\"FlapTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "George",
+                            "IsCharging",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "UnPauseObjectTimer"
+                          },
+                          "parameters": [
+                            "George",
+                            "\"FlapTimer\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Release Flap"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "George",
+                            "IsCharging",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MouseButtonFromTextReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Left\""
                           ]
                         }
                       ],
@@ -2563,8 +2489,183 @@
                           "parameters": [
                             "George",
                             "Physics2",
-                            "*",
-                            "1.25"
+                            "=",
+                            "min(min(George.ObjectTimerElapsedTime(\"FlapTimer\"), George.MaximumCharge) * George.FlapBoost * -1, George.Physics2::LinearVelocityY())"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "George",
+                            "IsCharging",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "assets\\flap.ogg",
+                            "",
+                            "100",
+                            "RandomFloatInRange(-1.25, 1.25)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "George",
+                            "\"FlapTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PauseObjectTimer"
+                          },
+                          "parameters": [
+                            "George",
+                            "\"FlapTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "George",
+                            "\"FlapDelay\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "George",
+                            "CanFlap",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Boost from Air Currents"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "CollisionNP"
+                              },
+                              "parameters": [
+                                "George",
+                                "AirCurrent",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::LinearVelocityY"
+                              },
+                              "parameters": [
+                                "George",
+                                "Physics2",
+                                "*",
+                                "1.25"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "George glides only when moving downwards - This is so that his glide power stat doesn't incidentally increase height gained from flaps via gravity reduction"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Physics2::LinearVelocityY"
+                          },
+                          "parameters": [
+                            "George",
+                            "Physics2",
+                            ">=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Physics2::GravityScale"
+                          },
+                          "parameters": [
+                            "George",
+                            "Physics2",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Physics2::LinearVelocityY"
+                          },
+                          "parameters": [
+                            "George",
+                            "Physics2",
+                            "<",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Physics2::GravityScale"
+                          },
+                          "parameters": [
+                            "George",
+                            "Physics2",
+                            "=",
+                            "1 - George.GlidePower"
                           ]
                         }
                       ]
@@ -2662,12 +2763,11 @@
                           "conditions": [
                             {
                               "type": {
-                                "inverted": true,
                                 "value": "Angle"
                               },
                               "parameters": [
                                 "George",
-                                "<=",
+                                ">",
                                 "90"
                               ]
                             }
@@ -2750,24 +2850,9 @@
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
             }
           ],
           "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         },
         {
           "colorB": 228,
@@ -2790,6 +2875,17 @@
                     "Grub",
                     "",
                     "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "George",
+                    "IsLevelEnding",
+                    "False",
                     ""
                   ]
                 }
@@ -2869,7 +2965,6 @@
               "comment": "Freeze motion upon hitting ground"
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -2967,6 +3062,15 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "FlapChargeBar",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "SetBooleanObjectVariable"
                       },
                       "parameters": [
@@ -3062,7 +3166,7 @@
                         "",
                         "Grub",
                         "2000",
-                        "RandomInRange(-675, -200)",
+                        "RandomInRange(-675, 400)",
                         ""
                       ]
                     },
@@ -3457,7 +3561,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.2705012603962551,
+        "zoomFactor": 0.3192894589690166,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -3614,15 +3718,15 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 2,
-          "height": 920,
+          "depth": 3,
+          "height": 1058,
           "keepRatio": true,
           "layer": "",
           "name": "George",
           "persistentUuid": "df1f543f-4a1a-4217-b86a-b961d7f86627",
-          "width": 943,
+          "width": 1084,
           "x": 985,
-          "y": 166,
+          "y": 28,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -4331,16 +4435,27 @@
                         "<",
                         "GlidingButton.Cost"
                       ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "0"
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "PlaySound"
+                        "value": "PlaySoundCanal"
                       },
                       "parameters": [
                         "",
                         "assets\\UpgradeFail.wav",
+                        "0",
                         "",
                         "35",
                         "1"
@@ -4375,12 +4490,13 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "PlaySound"
+                        "value": "PlaySoundCanal"
                       },
                       "parameters": [
                         "",
                         "assets\\UpgradeSuccess.wav",
-                        "",
+                        "1",
+                        "35",
                         "35",
                         "1"
                       ]
@@ -4441,16 +4557,27 @@
                         "<",
                         "FlapPowerButton.Cost"
                       ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "0"
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "PlaySound"
+                        "value": "PlaySoundCanal"
                       },
                       "parameters": [
                         "",
                         "assets\\UpgradeFail.wav",
+                        "0",
                         "",
                         "35",
                         "1"
@@ -4485,12 +4612,13 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "PlaySound"
+                        "value": "PlaySoundCanal"
                       },
                       "parameters": [
                         "",
                         "assets\\UpgradeSuccess.wav",
-                        "",
+                        "1",
+                        "35",
                         "35",
                         "1"
                       ]
@@ -4551,16 +4679,27 @@
                         "<",
                         "SpeedButton.Cost"
                       ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "0"
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "PlaySound"
+                        "value": "PlaySoundCanal"
                       },
                       "parameters": [
                         "",
                         "assets\\UpgradeFail.wav",
+                        "0",
                         "",
                         "35",
                         "1"
@@ -4595,12 +4734,13 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "PlaySound"
+                        "value": "PlaySoundCanal"
                       },
                       "parameters": [
                         "",
                         "assets\\UpgradeSuccess.wav",
-                        "",
+                        "1",
+                        "35",
                         "35",
                         "1"
                       ]
