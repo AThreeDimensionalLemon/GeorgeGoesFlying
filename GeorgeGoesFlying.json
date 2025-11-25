@@ -5122,18 +5122,7 @@
           "name": "George",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "LastX",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "LastY",
-              "type": "number",
-              "value": 0
-            }
-          ],
+          "variables": [],
           "effects": [],
           "behaviors": [
             {
@@ -5261,28 +5250,40 @@
                     "\"moveToCursor\"",
                     "CursorX() - 109",
                     "CursorY() - 109",
-                    "\"easeOutQuad\"",
-                    ".5",
+                    "\"easeOutQuint\"",
+                    "100 / DistanceBetweenPositions(CursorX(), CursorY(), George.X(), George.Y())",
                     "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "George",
-                    "LastX",
-                    "=",
-                    "George.X()"
                   ]
                 }
               ]
             },
             {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Mathematically, that should be set to 90. Dunno why George tilts slightly forward when I do though."
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
-              "actions": []
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "George",
+                    "=",
+                    "85 + (CursorX() - George.X()) / 10"
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
