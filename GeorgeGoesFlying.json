@@ -793,23 +793,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 64,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "19a5557d-de2b-4587-b96a-082fc1dfeb83",
-          "width": 64,
-          "x": 1203,
-          "y": -184,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -843,57 +826,6 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 0,
-          "height": 64,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "1bece4c9-1ff8-4402-947b-f1606e3d6bf6",
-          "width": 64,
-          "x": 1457,
-          "y": -326,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 64,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "021b3f0b-f576-4c92-b788-ea9979b71cd4",
-          "width": 64,
-          "x": 1804,
-          "y": -220,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 64,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "c3a83354-5e1f-40f7-9e11-93690015e1d8",
-          "width": 64,
-          "x": 1923,
-          "y": -344,
-          "zOrder": 9,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
           "depth": 5,
           "height": 305,
           "keepRatio": true,
@@ -904,57 +836,6 @@
           "x": 1520,
           "y": -128,
           "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 64,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "ac787009-2f2e-4c86-8aba-4369ab2e43a6",
-          "width": 64,
-          "x": 2053,
-          "y": 349,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 64,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "85a5e15a-19ff-43b9-84d3-d9c73a234d76",
-          "width": 64,
-          "x": 1429,
-          "y": 427,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 64,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Grub",
-          "persistentUuid": "2589970f-ddb9-4577-a5ec-d2d4f032a6b4",
-          "width": 64,
-          "x": 1838,
-          "y": 206,
-          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -981,7 +862,7 @@
             {
               "name": "MaximumCharge",
               "type": "number",
-              "value": 1
+              "value": 0.5
             },
             {
               "name": "IsLevelEnding",
@@ -2265,6 +2146,56 @@
                 "log(upgrades.gliding)/10"
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Spawn 8 Grubs at random locations upon game start"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Repeat",
+              "repeatExpression": "8",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Grub",
+                    "1200 + GrubSpawnOffset",
+                    "RandomInRange(-675, 400)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "GrubSpawnOffset",
+                    "+",
+                    "100"
+                  ]
+                }
+              ]
+            }
+          ],
+          "variables": [
+            {
+              "name": "GrubSpawnOffset",
+              "type": "number",
+              "value": 0
+            }
           ]
         },
         {
@@ -2905,7 +2836,7 @@
                     "George",
                     "\"FlapDelay\"",
                     ">=",
-                    "0.5"
+                    "0.25"
                   ]
                 }
               ],
@@ -3238,6 +3169,18 @@
                         "",
                         "Grub",
                         "2000",
+                        "RandomInRange(-675, 400)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Grub",
+                        "2200",
                         "RandomInRange(-675, 400)",
                         ""
                       ]
