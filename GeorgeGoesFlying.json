@@ -2871,67 +2871,6 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "George",
-                    "Grub",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "George",
-                    "IsLevelEnding",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Grub",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "grubs",
-                    "+",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlaySound"
-                  },
-                  "parameters": [
-                    "",
-                    "assets\\EatGrub.ogg",
-                    "",
-                    "100",
-                    "RandomFloatInRange(-1.25, 1.25)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
                     "value": "BooleanObjectVariable"
                   },
                   "parameters": [
@@ -2951,6 +2890,58 @@
                     "distanceTraveled",
                     "+",
                     "George.FlightSpeed * TimeDelta() / 20"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "George",
+                        "Grub",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Grub",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "grubs",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\EatGrub.ogg",
+                        "",
+                        "100",
+                        "RandomFloatInRange(-1.25, 1.25)"
+                      ]
+                    }
                   ]
                 }
               ]
