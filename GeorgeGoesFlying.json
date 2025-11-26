@@ -720,6 +720,11 @@
           "name": "IsSubmerged",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "BaseFlightSpeed",
+          "type": "number",
+          "value": 250
         }
       ],
       "effects": [],
@@ -1937,7 +1942,7 @@
     {
       "name": "swimFactor",
       "type": "number",
-      "value": 1
+      "value": 0
     }
   ],
   "layouts": [
@@ -2125,6 +2130,107 @@
                     "IsSubmerged",
                     "False",
                     ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Movement",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "George",
+                    "IsLevelEnding",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "George glides only when moving downwards - This is so that his glide power stat doesn't incidentally increase height gained from flaps via gravity reduction"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Physics2::LinearVelocityY"
+                      },
+                      "parameters": [
+                        "George",
+                        "Physics2",
+                        "<",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Physics2::GravityScale"
+                      },
+                      "parameters": [
+                        "George",
+                        "Physics2",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Physics2::LinearVelocityY"
+                      },
+                      "parameters": [
+                        "George",
+                        "Physics2",
+                        ">=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Physics2::GravityScale"
+                      },
+                      "parameters": [
+                        "George",
+                        "Physics2",
+                        "=",
+                        "1 - George.GlidePower"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -2374,7 +2480,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3411856023473468,
+        "zoomFactor": 0.44485159988866746,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -2423,7 +2529,7 @@
           "persistentUuid": "731691da-a76d-4add-8aff-14059c7d4d59",
           "width": 2304,
           "x": -128,
-          "y": 600,
+          "y": 1200,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -2432,15 +2538,15 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 1.004797208896642,
-          "height": 2048,
+          "depth": 1,
+          "height": 2125,
           "layer": "",
           "name": "Water",
           "opacity": 128,
           "persistentUuid": "2aed87e4-37d1-41af-8fb8-4f95b7026d65",
           "width": 2304,
           "x": -128,
-          "y": -1441,
+          "y": -917,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -2493,135 +2599,6 @@
           "target": "LevelEvents"
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "George",
-                "Water",
-                "Water",
-                "",
-                "no"
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanObjectVariable"
-              },
-              "parameters": [
-                "George",
-                "IsSubmerged",
-                "False",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Physics2::Gravity"
-              },
-              "parameters": [
-                "George",
-                "Physics2",
-                "0",
-                "-1"
-              ]
-            },
-            {
-              "type": {
-                "value": "PlaySound"
-              },
-              "parameters": [
-                "",
-                "assets\\downSplash.mp3",
-                "",
-                "25",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetBooleanObjectVariable"
-              },
-              "parameters": [
-                "George",
-                "IsSubmerged",
-                "True",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "George",
-                "Water",
-                "Water",
-                "",
-                "no"
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanObjectVariable"
-              },
-              "parameters": [
-                "George",
-                "IsSubmerged",
-                "True",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Physics2::Gravity"
-              },
-              "parameters": [
-                "George",
-                "Physics2",
-                "0",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "PlaySound"
-              },
-              "parameters": [
-                "",
-                "assets\\upSplash.ogg",
-                "",
-                "20",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetBooleanObjectVariable"
-              },
-              "parameters": [
-                "George",
-                "IsSubmerged",
-                "False",
-                ""
-              ]
-            }
-          ]
-        },
-        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
@@ -2663,7 +2640,7 @@
                     "George",
                     "Physics2",
                     "0",
-                    "-1"
+                    "-5"
                   ]
                 },
                 {
@@ -2679,12 +2656,24 @@
                 },
                 {
                   "type": {
-                    "value": "SetNumberVariable"
+                    "value": "SetNumberObjectVariable"
                   },
                   "parameters": [
-                    "swimFactor",
-                    "=",
-                    "-1"
+                    "George",
+                    "FlightSpeed",
+                    "*",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "George",
+                    "FlapBoost",
+                    "*",
+                    "1.5"
                   ]
                 }
               ]
@@ -2697,11 +2686,151 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Movement",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Submerged vs Above Water"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "George",
+                    "Water",
+                    "Water",
+                    "",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "George",
+                    "IsSubmerged",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Physics2::Gravity"
+                  },
+                  "parameters": [
+                    "George",
+                    "Physics2",
+                    "0",
+                    "-1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\downSplash.mp3",
+                    "",
+                    "25",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "George",
+                    "IsSubmerged",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "George",
+                    "Water",
+                    "Water",
+                    "",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "George",
+                    "IsSubmerged",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Physics2::Gravity"
+                  },
+                  "parameters": [
+                    "George",
+                    "Physics2",
+                    "0",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\upSplash.ogg",
+                    "",
+                    "20",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "George",
+                    "IsSubmerged",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
@@ -2765,6 +2894,78 @@
                     "Water",
                     "-",
                     "George.FlightSpeed * TimeDelta()"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "George glides only when moving upwards while underwater - This is so that his glide power stat doesn't incidentally increase depth gained from flaps via gravity reduction"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Physics2::LinearVelocityY"
+                      },
+                      "parameters": [
+                        "George",
+                        "Physics2",
+                        "<",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Physics2::GravityScale"
+                      },
+                      "parameters": [
+                        "George",
+                        "Physics2",
+                        "=",
+                        "1 - George.GlidePower"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Physics2::LinearVelocityY"
+                      },
+                      "parameters": [
+                        "George",
+                        "Physics2",
+                        ">=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Physics2::GravityScale"
+                      },
+                      "parameters": [
+                        "George",
+                        "Physics2",
+                        "=",
+                        "1"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -4643,7 +4844,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Spawn 8 Grubs at random locations upon game start"
+                  "comment": "Spawn Grubs at random locations upon game start"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Repeat",
@@ -4975,13 +5176,12 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "Physics2::LinearVelocityY"
+                            "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "George",
-                            "Physics2",
+                            "Local_TimerValue",
                             "=",
-                            "swimFactor * min(min(George.ObjectTimerElapsedTime(\"FlapTimer\"), George.MaximumCharge) * George.FlapBoost * -1, George.Physics2::LinearVelocityY())"
+                            "min(George.ObjectTimerElapsedTime(\"FlapTimer\"), George.MaximumCharge)"
                           ]
                         },
                         {
@@ -5044,9 +5244,90 @@
                             "False",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "Physics2::LinearVelocityY"
+                          },
+                          "parameters": [
+                            "George",
+                            "Physics2",
+                            "=",
+                            "max(Local_TimerValue * George.FlapBoost, George.Physics2::LinearVelocityY())"
+                          ]
                         }
                       ],
                       "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "We don't want weaker flaps to overwrite George's speed from a stronger flap, but the direction that this matters depends on whether he's underwater or not, so we swap whether we call the min or max funciton"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "George",
+                                "IsSubmerged",
+                                "=",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::LinearVelocityY"
+                              },
+                              "parameters": [
+                                "George",
+                                "Physics2",
+                                "=",
+                                "min(Local_TimerValue * George.FlapBoost * -1, George.Physics2::LinearVelocityY())"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "George",
+                                "IsSubmerged",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Physics2::LinearVelocityY"
+                              },
+                              "parameters": [
+                                "George",
+                                "Physics2",
+                                "=",
+                                "max(Local_TimerValue * George.FlapBoost, George.Physics2::LinearVelocityY())"
+                              ]
+                            }
+                          ]
+                        },
                         {
                           "type": "BuiltinCommonInstructions::Comment",
                           "color": {
@@ -5101,75 +5382,12 @@
                             }
                           ]
                         }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "George glides only when moving downwards - This is so that his glide power stat doesn't incidentally increase height gained from flaps via gravity reduction"
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "Physics2::LinearVelocityY"
-                          },
-                          "parameters": [
-                            "George",
-                            "Physics2",
-                            "<",
-                            "0"
-                          ]
-                        }
                       ],
-                      "actions": [
+                      "variables": [
                         {
-                          "type": {
-                            "value": "Physics2::GravityScale"
-                          },
-                          "parameters": [
-                            "George",
-                            "Physics2",
-                            "=",
-                            "1"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "Physics2::LinearVelocityY"
-                          },
-                          "parameters": [
-                            "George",
-                            "Physics2",
-                            ">=",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Physics2::GravityScale"
-                          },
-                          "parameters": [
-                            "George",
-                            "Physics2",
-                            "=",
-                            "1 - George.GlidePower"
-                          ]
+                          "name": "Local_TimerValue",
+                          "type": "number",
+                          "value": 0
                         }
                       ]
                     }
@@ -5813,6 +6031,18 @@
                 },
                 {
                   "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "UI",
+                    "=",
+                    "George.SmoothCamera::OffsetX()",
+                    "=",
+                    "George.SmoothCamera::OffsetY()"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "MettreY"
                   },
                   "parameters": [
@@ -5829,18 +6059,6 @@
                     "FlapChargeBar",
                     "=",
                     "floor(min(George.MaximumCharge, George.ObjectTimerElapsedTime(\"FlapTimer\")) / George.MaximumCharge * 10)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "UI",
-                    "=",
-                    "George.SmoothCamera::OffsetX()",
-                    "=",
-                    "George.SmoothCamera::OffsetY()"
                   ]
                 }
               ]
