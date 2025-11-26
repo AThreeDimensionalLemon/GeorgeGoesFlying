@@ -1943,6 +1943,16 @@
       "name": "swimFactor",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "flightLevelCounter",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "name": "swimLevelCounter",
+      "type": "number",
+      "value": 1
     }
   ],
   "layouts": [
@@ -2237,6 +2247,23 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "UI",
+                "Text",
+                "=",
+                "\"Level \" + ToString(flightLevelCounter) + NewLine() + \"Distance: \" + ToString(floor(distanceTraveled)) + NewLine() + \"Grubs: \" + ToString(grubs)"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -2480,7 +2507,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.44485159988866746,
+        "zoomFactor": 0.3411856023473469,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -2738,7 +2765,7 @@
                     "George",
                     "Physics2",
                     "0",
-                    "-1"
+                    "-5"
                   ]
                 },
                 {
@@ -2803,7 +2830,7 @@
                     "George",
                     "Physics2",
                     "0",
-                    "1"
+                    "5"
                   ]
                 },
                 {
@@ -2972,6 +2999,23 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "UI",
+                "Text",
+                "=",
+                "\"Level \" + ToString(swimLevelCounter) + NewLine() + \"Distance: \" + ToString(floor(distanceTraveled)) + NewLine() + \"Grubs: \" + ToString(grubs)"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -3269,7 +3313,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.24488383633725502,
+        "zoomFactor": 0.5995738389111088,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -3450,8 +3494,8 @@
           "name": "SwimLevelButton",
           "persistentUuid": "4d196a89-625a-462c-9a16-6cae420e83f6",
           "width": 326,
-          "x": 405,
-          "y": 1136,
+          "x": 72,
+          "y": 1176,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -4497,6 +4541,16 @@
           "actions": [
             {
               "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "flightLevelCounter",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
                 "value": "Scene"
               },
               "parameters": [
@@ -4521,6 +4575,16 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "swimLevelCounter",
+                "+",
+                "1"
+              ]
+            },
             {
               "type": {
                 "value": "Scene"
@@ -4613,15 +4677,73 @@
                 "=",
                 "(upgrades.flapPower-1) * 3 + 1"
               ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
+              },
+              "parameters": [
+                "NextLevelButton",
+                "=",
+                "\"Flight Level \" + ToString(flightLevelCounter + 1)",
+                ""
+              ]
             },
             {
               "type": {
-                "value": "MettreY"
+                "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
               },
               "parameters": [
                 "SwimLevelButton",
                 "=",
-                "clamp(1136 - ((upgrades.flapPower + upgrades.gliding + upgrades.speed - 10) * 10), 936, 1136)"
+                "\"Swim Level \" + ToString(swimLevelCounter + 1)",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "flightLevelCounter",
+                    ">=",
+                    "5"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "SwimLevelButton",
+                    "=",
+                    "NextLevelButton.X() + 500",
+                    "=",
+                    "NextLevelButton.Y()"
+                  ]
+                }
               ]
             }
           ]
@@ -4807,7 +4929,7 @@
                     "George",
                     "FlightSpeed",
                     "+",
-                    "upgrades.speed * 10"
+                    "upgrades.speed * 20"
                   ]
                 },
                 {
@@ -6018,17 +6140,6 @@
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "UI",
-                    "Text",
-                    "=",
-                    "\"Distance: \" + ToString(floor(distanceTraveled)) + NewLine() + \"Grubs: \" + ToString(grubs)"
-                  ]
-                },
                 {
                   "type": {
                     "value": "MettreXY"
