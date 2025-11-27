@@ -687,6 +687,37 @@
         "name": "S_Pipe",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/shopupgradeglideupdated.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/shopupgradeglideupdated.png\",\"extension\":\".png\"}",
+        "name": "assets\\shopupgradeglideupdated.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/penguinspriteshopowchie.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\penguinspriteshopowchie.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/penguinspriteshopowchie2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\penguinspriteshopowchie2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/PTSans-Bold.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "assets\\PTSans-Bold.ttf",
+        "userAdded": false
       }
     ]
   },
@@ -2066,12 +2097,17 @@
     {
       "name": "flightLevelCounter",
       "type": "number",
-      "value": 1
+      "value": 0
     },
     {
       "name": "swimLevelCounter",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "lastPlayedFlying",
+      "type": "boolean",
+      "value": true
     }
   ],
   "layouts": [
@@ -3551,7 +3587,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.41630252177333354,
+        "zoomFactor": 0.4448515998886659,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -3738,6 +3774,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Directions",
+          "persistentUuid": "5fe015bf-e68b-4675-8043-adf6afddf685",
+          "width": 0,
+          "x": 1232,
+          "y": 15,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -3788,16 +3840,17 @@
           ],
           "animations": [
             {
-              "name": "",
+              "name": "assets\\shopupgradeglideupdated",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "assets\\shopupgradeglide.png",
+                      "image": "assets\\shopupgradeglideupdated.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3813,20 +3866,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 49,
+                            "x": 42,
                             "y": 202
                           },
                           {
-                            "x": 1933,
+                            "x": 1944,
                             "y": 202
                           },
                           {
-                            "x": 1933,
-                            "y": 1677
+                            "x": 1944,
+                            "y": 1676
                           },
                           {
-                            "x": 49,
-                            "y": 1677
+                            "x": 42,
+                            "y": 1676
                           }
                         ]
                       ]
@@ -4319,6 +4372,102 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\penguinspriteshopowchie.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 563,
+                            "y": 536
+                          },
+                          {
+                            "x": 2000,
+                            "y": 536
+                          },
+                          {
+                            "x": 2000,
+                            "y": 1952
+                          },
+                          {
+                            "x": 563,
+                            "y": 1952
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\penguinspriteshopowchie2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 563,
+                            "y": 536
+                          },
+                          {
+                            "x": 2000,
+                            "y": 536
+                          },
+                          {
+                            "x": 2000,
+                            "y": 1952
+                          },
+                          {
+                            "x": 563,
+                            "y": 1952
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -4338,6 +4487,49 @@
             "TopPadding": 32,
             "HoveredFadeOutDuration": 0.25,
             "LabelText": "TRY SWIMMING"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Directions",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Hold Click to charge a flap, then release",
+          "font": "assets\\PTSans-Bold.ttf",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Hold Click to charge a flap, then release",
+            "font": "assets\\PTSans-Bold.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 40,
+            "lineHeight": 0,
+            "color": "0;0;0"
           }
         }
       ],
@@ -4381,6 +4573,9 @@
           },
           {
             "objectName": "George_Image"
+          },
+          {
+            "objectName": "Directions"
           }
         ]
       },
@@ -4798,6 +4993,16 @@
                 },
                 {
                   "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "lastPlayedFlying",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Scene"
                   },
                   "parameters": [
@@ -4830,6 +5035,16 @@
                     "flightLevelCounter",
                     "+",
                     "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "lastPlayedFlying",
+                    "True",
+                    ""
                   ]
                 },
                 {
@@ -4876,7 +5091,7 @@
                   "parameters": [
                     "NextLevelButton",
                     "=",
-                    "\"Flight Level \" + ToString(flightLevelCounter + 1)",
+                    "\"To Flight Level \" + ToString(flightLevelCounter + 1)",
                     ""
                   ]
                 },
@@ -4887,7 +5102,7 @@
                   "parameters": [
                     "SwimLevelButton",
                     "=",
-                    "\"Swim Level \" + ToString(swimLevelCounter + 1)",
+                    "\"To Swim Level \" + ToString(swimLevelCounter + 1)",
                     ""
                   ]
                 }
@@ -4921,6 +5136,90 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "lastPlayedFlying",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "flightLevelCounter",
+                            ">=",
+                            "3"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "flightLevelCounter",
+                            "<",
+                            "5"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                          },
+                          "parameters": [
+                            "George_Image",
+                            "Animation",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "flightLevelCounter",
+                            ">=",
+                            "5"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                          },
+                          "parameters": [
+                            "George_Image",
+                            "Animation",
+                            "=",
+                            "2"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -4947,7 +5246,7 @@
                     "SpeedText",
                     "Text",
                     "=",
-                    "\"Level: \" + ToString(upgrades.speed) + NewLine() + \"Cost: \" + ToString(SpeedButton.Cost)"
+                    "\"Speed\" + NewLine() + \"Level: \" + ToString(upgrades.speed) + NewLine() + \"Cost: \" + ToString(SpeedButton.Cost)"
                   ]
                 },
                 {
@@ -4958,7 +5257,7 @@
                     "FlapPowerText",
                     "Text",
                     "=",
-                    "\"Level: \" + ToString(upgrades.flapPower) + NewLine() + \"Cost: \" + ToString(FlapPowerButton.Cost)"
+                    "\"Flap Power\" + NewLine() + \"Level: \" + ToString(upgrades.flapPower) + NewLine() + \"Cost: \" + ToString(FlapPowerButton.Cost)"
                   ]
                 },
                 {
@@ -4969,7 +5268,7 @@
                     "GlidingText",
                     "Text",
                     "=",
-                    "\"Level: \" + ToString(upgrades.gliding) + NewLine() + \"Cost: \" + ToString(GlidingButton.Cost)"
+                    "\"Gliding\" + NewLine() + \"Level: \" + ToString(upgrades.gliding) + NewLine() + \"Cost: \" + ToString(GlidingButton.Cost)"
                   ]
                 },
                 {
@@ -5242,8 +5541,8 @@
                       "parameters": [
                         "",
                         "Grub",
-                        "1200 + GrubSpawnOffset",
-                        "RandomInRange(-675, 400)",
+                        "1500 + GrubSpawnOffset",
+                        "RandomInRange(-675, 250)",
                         ""
                       ]
                     },
