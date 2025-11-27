@@ -583,7 +583,7 @@
       {
         "file": "assets/grubbugfly1.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/grubbugfly1.png\",\"extension\":\".png\"}",
         "name": "assets\\grubbugfly1.png",
         "smoothed": true,
         "userAdded": false
@@ -591,7 +591,7 @@
       {
         "file": "assets/grubbugfly2.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/grubbugfly2.png\",\"extension\":\".png\"}",
         "name": "assets\\grubbugfly2.png",
         "smoothed": true,
         "userAdded": false
@@ -669,6 +669,22 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
         "name": "S_Water",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_S_GrubUnderwater.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\assets_S_GrubUnderwater.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_Pipe.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_Pipe",
         "smoothed": true,
         "userAdded": false
       }
@@ -1719,7 +1735,7 @@
       }
     },
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "Grub",
       "preScale": 0.035,
@@ -1730,7 +1746,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "S_GrubPlaceholder",
+          "name": "Fly",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1756,20 +1772,38 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 550,
+                        "x": 487,
+                        "y": 1181.5
+                      },
+                      {
+                        "x": 535,
+                        "y": 580.5
+                      },
+                      {
+                        "x": 1396,
                         "y": 607
                       },
                       {
-                        "x": 1397,
-                        "y": 607
+                        "x": 1396,
+                        "y": 1157
+                      }
+                    ],
+                    [
+                      {
+                        "x": 2.5,
+                        "y": 48
                       },
                       {
-                        "x": 1397,
-                        "y": 1158
+                        "x": 122,
+                        "y": 48
                       },
                       {
-                        "x": 550,
-                        "y": 1158
+                        "x": 121,
+                        "y": 80
+                      },
+                      {
+                        "x": 21,
+                        "y": 89.5
                       }
                     ]
                   ]
@@ -1792,20 +1826,104 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 550,
+                        "x": 487,
+                        "y": 1181.5
+                      },
+                      {
+                        "x": 535,
+                        "y": 580.5
+                      },
+                      {
+                        "x": 1396,
                         "y": 607
                       },
                       {
-                        "x": 1397,
+                        "x": 1396,
+                        "y": 1157
+                      }
+                    ],
+                    [
+                      {
+                        "x": 2.5,
+                        "y": 48
+                      },
+                      {
+                        "x": 122,
+                        "y": 48
+                      },
+                      {
+                        "x": 121,
+                        "y": 80
+                      },
+                      {
+                        "x": 21,
+                        "y": 89.5
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Fish",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\assets_S_GrubUnderwater.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 487,
+                        "y": 1181.5
+                      },
+                      {
+                        "x": 535,
+                        "y": 580.5
+                      },
+                      {
+                        "x": 1396,
                         "y": 607
                       },
                       {
-                        "x": 1397,
-                        "y": 1158
+                        "x": 1396,
+                        "y": 1157
+                      }
+                    ],
+                    [
+                      {
+                        "x": 2.5,
+                        "y": 48
                       },
                       {
-                        "x": 550,
-                        "y": 1158
+                        "x": 122,
+                        "y": 48
+                      },
+                      {
+                        "x": 121,
+                        "y": 80
+                      },
+                      {
+                        "x": 21,
+                        "y": 89.5
                       }
                     ]
                   ]
@@ -2508,7 +2626,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3411856023473469,
+        "zoomFactor": 0.3192894589690184,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -2528,6 +2646,11 @@
           "name": "nextElement",
           "type": "number",
           "value": 20
+        },
+        {
+          "name": "pipeSpawnModulus",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -2608,6 +2731,67 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Pipe",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "S_Pipe",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "S_Pipe",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 64,
+                            "y": 1
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 1,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -2615,6 +2799,9 @@
         "children": [
           {
             "objectName": "Water"
+          },
+          {
+            "objectName": "Pipe"
           }
         ]
       },
@@ -3029,6 +3216,44 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AjoutObjConcern"
+              },
+              "parameters": [
+                "",
+                "Grub"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Grub",
+                "Animation",
+                "=",
+                "\"Fish\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "Grub",
+                "Scale",
+                "=",
+                "20"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -3326,7 +3551,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5995738389111088,
+        "zoomFactor": 0.41630252177333354,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -5679,6 +5904,17 @@
                                 "George",
                                 ">",
                                 "90"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "George",
+                                "IsSubmerged",
+                                "=",
+                                ""
                               ]
                             }
                           ],
