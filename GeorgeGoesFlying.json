@@ -1,9 +1,9 @@
 {
   "firstLayout": "FlightLevel",
   "gdVersion": {
-    "build": 249,
+    "build": 247,
     "major": 5,
-    "minor": 6,
+    "minor": 5,
     "revision": 0
   },
   "properties": {
@@ -717,6 +717,22 @@
         "kind": "font",
         "metadata": "",
         "name": "assets\\PTSans-Bold.ttf",
+        "userAdded": false
+      },
+      {
+        "file": "assets/windcurrent.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/windcurrent.png\",\"extension\":\".png\"}",
+        "name": "assets/windcurrent.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/S_CurrentUnderwater.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "S_CurrentUnderwater",
+        "smoothed": true,
         "userAdded": false
       }
     ]
@@ -2034,6 +2050,55 @@
               ]
             }
           ]
+        },
+        {
+          "name": "S_CurrentUnderwater",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "S_CurrentUnderwater",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 265,
+                        "y": 106
+                      },
+                      {
+                        "x": 1624,
+                        "y": 106
+                      },
+                      {
+                        "x": 1624,
+                        "y": 1789
+                      },
+                      {
+                        "x": 265,
+                        "y": 1789
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -3290,6 +3355,33 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AjoutObjConcern"
+              },
+              "parameters": [
+                "",
+                "Current"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+              },
+              "parameters": [
+                "Current",
+                "Animation",
+                "=",
+                "1"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -3587,7 +3679,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4448515998886659,
+        "zoomFactor": 0.45985214267363406,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -3751,8 +3843,8 @@
           "name": "George_Image",
           "persistentUuid": "df1f543f-4a1a-4217-b86a-b961d7f86627",
           "width": 1084,
-          "x": 985,
-          "y": 28,
+          "x": 830,
+          "y": 23,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -3777,15 +3869,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 43,
           "keepRatio": true,
           "layer": "",
           "name": "Directions",
           "persistentUuid": "5fe015bf-e68b-4675-8043-adf6afddf685",
-          "width": 0,
-          "x": 1232,
-          "y": 15,
+          "width": 581,
+          "x": 1262,
+          "y": 39,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -4500,7 +4593,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Hold Click to charge a flap, then release",
+          "string": "Hold Click or Space to charge a flap, then release",
           "font": "assets\\PTSans-Bold.ttf",
           "textAlignment": "left",
           "characterSize": 40,
@@ -4523,7 +4616,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Hold Click to charge a flap, then release",
+            "text": "Hold Click or Space to charge a flap, then release",
             "font": "assets\\PTSans-Bold.ttf",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -5775,15 +5868,6 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "MouseButtonFromTextPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Left\""
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "BooleanObjectVariable"
                           },
                           "parameters": [
@@ -5802,6 +5886,32 @@
                             "CanFlap",
                             "True",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "MouseButtonFromTextPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Left\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "KeyFromTextPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Space\""
+                              ]
+                            }
                           ]
                         }
                       ],
@@ -5865,11 +5975,28 @@
                         },
                         {
                           "type": {
-                            "value": "MouseButtonFromTextReleased"
+                            "value": "BuiltinCommonInstructions::Or"
                           },
-                          "parameters": [
-                            "",
-                            "\"Left\""
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "MouseButtonFromTextReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Left\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "KeyFromTextReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Space\""
+                              ]
+                            }
                           ]
                         }
                       ],
@@ -6539,7 +6666,7 @@
                         "value": "Wait"
                       },
                       "parameters": [
-                        "2"
+                        "3"
                       ]
                     },
                     {
@@ -6655,7 +6782,6 @@
                         "    instance.setPosition(2100, -675 + Math.random() * 1075);\r",
                         "    instance.setHeight(25 + Math.random() * 175);\r",
                         "    instance.setWidth(instance.getHeight());\r",
-                        "    console.log(\"pipe created!\")\r",
                         "}"
                       ],
                       "parameterObjects": "",
