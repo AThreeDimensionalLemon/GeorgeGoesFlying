@@ -1,9 +1,9 @@
 {
   "firstLayout": "FlightLevel",
   "gdVersion": {
-    "build": 246,
+    "build": 249,
     "major": 5,
-    "minor": 5,
+    "minor": 6,
     "revision": 0
   },
   "properties": {
@@ -2036,6 +2036,67 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Pipe",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "S_Pipe",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "S_Pipe",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 1
+                      },
+                      {
+                        "x": 64,
+                        "y": 1
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 1,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -2052,6 +2113,9 @@
       },
       {
         "objectName": "Grub"
+      },
+      {
+        "objectName": "Pipe"
       },
       {
         "objectName": "Ground"
@@ -2767,67 +2831,6 @@
           "variables": [],
           "effects": [],
           "behaviors": []
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Pipe",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "S_Pipe",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "S_Pipe",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 1,
-                            "y": 1
-                          },
-                          {
-                            "x": 64,
-                            "y": 1
-                          },
-                          {
-                            "x": 64,
-                            "y": 64
-                          },
-                          {
-                            "x": 1,
-                            "y": 64
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "objectsFolderStructure": {
@@ -2835,9 +2838,6 @@
         "children": [
           {
             "objectName": "Water"
-          },
-          {
-            "objectName": "Pipe"
           }
         ]
       },
@@ -5698,6 +5698,23 @@
                 },
                 {
                   "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Pipe",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Pipe",
+                        "-",
+                        "George.FlightSpeed * TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
                   "object": "Current",
                   "conditions": [],
                   "actions": [
@@ -6610,11 +6627,20 @@
                         "    instance.setPosition(2000, -128);\r",
                         "    instance.setHeight(350);\r",
                         "    instance.setWidth(350);\r",
+                        "}\r",
+                        "\r",
+                        "if (Math.random() < 0.5 && runtimeScene.getName() == \"SwimLevel\") {\r",
+                        "    const instance = runtimeScene.createObject(\"Pipe\");\r",
+                        "    instance.setLayer(\"Base Layer\");\r",
+                        "    instance.setPosition(2100, -675 + Math.random() * 1075);\r",
+                        "    instance.setHeight(25 + Math.random() * 175);\r",
+                        "    instance.setWidth(instance.getHeight());\r",
+                        "    console.log(\"pipe created!\")\r",
                         "}"
                       ],
                       "parameterObjects": "",
                       "useStrict": true,
-                      "eventsSheetExpanded": false
+                      "eventsSheetExpanded": true
                     }
                   ]
                 },
@@ -6651,6 +6677,32 @@
                       },
                       "parameters": [
                         "Current",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "Pipe",
+                        "<=",
+                        "-600"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Pipe",
                         ""
                       ]
                     }
