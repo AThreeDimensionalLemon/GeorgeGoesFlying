@@ -1,9 +1,9 @@
 {
   "firstLayout": "FlightLevel",
   "gdVersion": {
-    "build": 247,
+    "build": 249,
     "major": 5,
-    "minor": 5,
+    "minor": 6,
     "revision": 0
   },
   "properties": {
@@ -740,6 +740,94 @@
         "kind": "font",
         "metadata": "",
         "name": "assets/CantoraOne-Regular.ttf",
+        "userAdded": false
+      },
+      {
+        "file": "assets/heaven.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/heaven.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/marblepedestal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/marblepedestal.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/grubfish.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/grubfish.png\",\"extension\":\".png\"}",
+        "name": "assets/grubfish.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/penguinbackgroundzoo.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/penguinbackgroundzoo.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/penguinbackgroundzoo2.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/penguinbackgroundzoo2.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/penguinbackgroundcitystart.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/penguinbackgroundcitystart.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/penguinbackgroundcity2.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/penguinbackgroundcity2.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/sky.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/sky.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/birds1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/birds1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/birds2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/birds2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/birds3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/birds3.png",
+        "smoothed": true,
         "userAdded": false
       }
     ]
@@ -1926,11 +2014,12 @@
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\assets_S_GrubUnderwater.png",
+                  "image": "assets/grubfish.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2269,7 +2358,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3895856273827303,
+        "zoomFactor": 0.3088741216342684,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -2374,11 +2463,760 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1207,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background1",
+          "persistentUuid": "c77ace58-7ffc-4026-8eb1-a54295417985",
+          "width": 1857,
+          "x": 0,
+          "y": -602,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 1207,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background2",
+          "persistentUuid": "79894ed4-285f-4bfd-90be-13f1927576df",
+          "width": 1856.9230769230771,
+          "x": 1856,
+          "y": -602,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 1207,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background3",
+          "persistentUuid": "b796c96e-a50a-4cd3-87b1-a5ee837e0bb8",
+          "width": 1856.9230769230771,
+          "x": 3713,
+          "y": -602,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 1207,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background4",
+          "persistentUuid": "ec53c37b-513a-4531-8660-9600dc5b239d",
+          "width": 1856.9230769230771,
+          "x": 5569,
+          "y": -602,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 1207,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background5",
+          "persistentUuid": "ff198240-0ead-4873-8c5f-3106071e1055",
+          "width": 1856.9230769230771,
+          "x": 7425,
+          "y": -602,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 1247.9999999999998,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Sky",
+          "persistentUuid": "ac7a46c9-926a-41e4-8120-ed775072c18e",
+          "width": 1920,
+          "x": 0,
+          "y": -1838,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 1247.9999999999998,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Sky2",
+          "persistentUuid": "106605fd-6911-43f5-9095-498c5b608e4f",
+          "width": 1920,
+          "x": 1920,
+          "y": -1838,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 209,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Bird",
+          "persistentUuid": "c6f3cf91-1fef-4920-9901-56fa3e5044ad",
+          "width": 322,
+          "x": 549,
+          "y": -500,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 209,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Bird",
+          "persistentUuid": "0b11bb76-76f8-4c4a-a125-a354599a7d6a",
+          "width": 322,
+          "x": 738,
+          "y": -592,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 209,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Bird",
+          "persistentUuid": "37924b8d-3d6d-4f42-8daa-e9f8785e77c9",
+          "width": 322,
+          "x": 961,
+          "y": -447,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
-      "objects": [],
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Background1",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/penguinbackgroundzoo.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 1950
+                          },
+                          {
+                            "x": 0,
+                            "y": 1950
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Background2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/penguinbackgroundzoo2.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 1950
+                          },
+                          {
+                            "x": 0,
+                            "y": 1950
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Background3",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/penguinbackgroundcitystart.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 1950
+                          },
+                          {
+                            "x": 0,
+                            "y": 1950
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Background4",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/penguinbackgroundcity2.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 1950
+                          },
+                          {
+                            "x": 0,
+                            "y": 1950
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Background5",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/penguinbackgroundcity2.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 1950
+                          },
+                          {
+                            "x": 0,
+                            "y": 1950
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Sky",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/sky.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 1950
+                          },
+                          {
+                            "x": 0,
+                            "y": 1950
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Sky2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/sky.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 1950
+                          },
+                          {
+                            "x": 0,
+                            "y": 1950
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Bird",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/birds1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 537,
+                            "y": 289
+                          },
+                          {
+                            "x": 2414,
+                            "y": 289
+                          },
+                          {
+                            "x": 2414,
+                            "y": 1544
+                          },
+                          {
+                            "x": 537,
+                            "y": 1544
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/birds2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 537,
+                            "y": 289
+                          },
+                          {
+                            "x": 2414,
+                            "y": 289
+                          },
+                          {
+                            "x": 2414,
+                            "y": 1544
+                          },
+                          {
+                            "x": 537,
+                            "y": 1544
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/birds3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 537,
+                            "y": 289
+                          },
+                          {
+                            "x": 2414,
+                            "y": 289
+                          },
+                          {
+                            "x": 2414,
+                            "y": 1544
+                          },
+                          {
+                            "x": 537,
+                            "y": 1544
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "objectsFolderStructure": {
-        "folderName": "__ROOT"
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Background1"
+          },
+          {
+            "objectName": "Background2"
+          },
+          {
+            "objectName": "Background3"
+          },
+          {
+            "objectName": "Background4"
+          },
+          {
+            "objectName": "Background5"
+          },
+          {
+            "objectName": "Sky"
+          },
+          {
+            "objectName": "Sky2"
+          },
+          {
+            "objectName": "Bird"
+          }
+        ]
       },
       "events": [
         {
@@ -2431,6 +3269,26 @@
                     "IsSubmerged",
                     "False",
                     ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Bird",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AddForceAL"
+                      },
+                      "parameters": [
+                        "Bird",
+                        "-45",
+                        "500",
+                        "1"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -2552,6 +3410,255 @@
                 "Text",
                 "=",
                 "\"Level \" + ToString(flightLevelCounter) + NewLine() + \"Distance: \" + ToString(floor(distanceTraveled)) + NewLine() + \"Grubs: \" + ToString(grubs)"
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Background Scrolling",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "George",
+                "IsLevelEnding",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Background1",
+                "-",
+                "George.FlightSpeed * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Background2",
+                "-",
+                "George.FlightSpeed * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Background3",
+                "-",
+                "George.FlightSpeed * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Background4",
+                "-",
+                "George.FlightSpeed * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Background5",
+                "-",
+                "George.FlightSpeed * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Sky",
+                "-",
+                "George.FlightSpeed * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Sky2",
+                "-",
+                "George.FlightSpeed * TimeDelta()"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Background5",
+                    "<=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Background5",
+                    ">=",
+                    "-1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Background4",
+                    "=",
+                    "Background5.Width()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Background5",
+                    "<=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Background5",
+                    ">=",
+                    "-1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Background4",
+                    "=",
+                    "Background5.Width()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Sky",
+                    "<=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Sky",
+                    ">=",
+                    "-1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Sky2",
+                    "=",
+                    "Sky.Width()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Sky2",
+                    "<=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Sky2",
+                    ">=",
+                    "-1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Sky",
+                    "=",
+                    "Sky.Width()"
+                  ]
+                }
               ]
             }
           ]
@@ -2798,7 +3905,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3192894589690184,
+        "zoomFactor": 0.2890516203134935,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -2890,6 +3997,40 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 1247.9999999999998,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background1",
+          "persistentUuid": "4b190405-cb3d-4372-92f9-7a5d8edc6e90",
+          "width": 1920,
+          "x": 0,
+          "y": -2165,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 1247.9999999999998,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Background2",
+          "persistentUuid": "23dc4fa5-7a78-4bf2-bd2e-26536ce605c5",
+          "width": 1920,
+          "x": 1920,
+          "y": -2165,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -2903,6 +4044,126 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Background1",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/penguinbackgroundcity2.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 1950
+                          },
+                          {
+                            "x": 0,
+                            "y": 1950
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Background2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/penguinbackgroundcity2.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 1950
+                          },
+                          {
+                            "x": 0,
+                            "y": 1950
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -2910,6 +4171,12 @@
         "children": [
           {
             "objectName": "Water"
+          },
+          {
+            "objectName": "Background1"
+          },
+          {
+            "objectName": "Background2"
           }
         ]
       },
@@ -3349,17 +4616,6 @@
                 "=",
                 "\"Fish\""
               ]
-            },
-            {
-              "type": {
-                "value": "ScalableCapability::ScalableBehavior::SetValue"
-              },
-              "parameters": [
-                "Grub",
-                "Scale",
-                "=",
-                "20"
-              ]
             }
           ]
         },
@@ -3386,6 +4642,131 @@
                 "Animation",
                 "=",
                 "1"
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Background Scrolling",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "George",
+                "IsLevelEnding",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Background1",
+                "-",
+                "George.FlightSpeed * TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Background2",
+                "-",
+                "George.FlightSpeed * TimeDelta()"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Background2",
+                    "<=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Background2",
+                    ">=",
+                    "-1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Background1",
+                    "=",
+                    "Background2.Width()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Background1",
+                    "<=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Background1",
+                    ">=",
+                    "-1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Background2",
+                    "=",
+                    "Background1.Width()"
+                  ]
+                }
               ]
             }
           ]
@@ -3686,7 +5067,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.45985214267363406,
+        "zoomFactor": 0.5079575118131747,
         "windowMask": false,
         "selectedLayer": ""
       },
@@ -3751,8 +5132,8 @@
           "name": "GlidingText",
           "persistentUuid": "c08d6ca9-2bbb-4359-9d00-0bd45cf0d318",
           "width": 0,
-          "x": 132,
-          "y": 608,
+          "x": 189,
+          "y": 560,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -3767,8 +5148,8 @@
           "name": "FlapPowerText",
           "persistentUuid": "75393411-8391-499a-9885-89e91736f300",
           "width": 0,
-          "x": 959,
-          "y": 613,
+          "x": 1011,
+          "y": 567,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -3776,15 +5157,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 50,
           "keepRatio": true,
           "layer": "",
           "name": "SpeedText",
           "persistentUuid": "d59c90c8-622b-44d4-8d69-4c2d7ced14c6",
-          "width": 0,
-          "x": 536,
-          "y": 611,
+          "width": 804,
+          "x": 297,
+          "y": 566,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -3852,7 +5234,7 @@
           "width": 1084,
           "x": 830,
           "y": 23,
-          "zOrder": 1,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3904,6 +5286,74 @@
           "x": 880,
           "y": 936,
           "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0.9706774519716886,
+          "height": 1248.2912032355912,
+          "keepRatio": true,
+          "layer": "",
+          "name": "ShopBackground",
+          "persistentUuid": "3b5f894e-51b6-446e-a7b7-45a6b130e82b",
+          "width": 1920,
+          "x": -1,
+          "y": 1,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 402,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Pillar",
+          "persistentUuid": "157dd914-32de-42ea-9009-f0e68dcf5c99",
+          "width": 261,
+          "x": 154,
+          "y": 492,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 402,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Pillar",
+          "persistentUuid": "1c5e0879-ede0-41dc-8c06-fc2d93466788",
+          "width": 261,
+          "x": 576,
+          "y": 492,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 402,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Pillar",
+          "persistentUuid": "646f1bb5-678d-4d69-88dd-7db586dbc12e",
+          "width": 261,
+          "x": 980,
+          "y": 492,
+          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4106,7 +5556,7 @@
           "behaviors": [],
           "string": "error: gliding information not retreived!",
           "font": "",
-          "textAlignment": "left",
+          "textAlignment": "center",
           "characterSize": 48,
           "color": {
             "b": 0,
@@ -4129,7 +5579,7 @@
             "underlined": false,
             "text": "error: gliding information not retreived!",
             "font": "",
-            "textAlignment": "left",
+            "textAlignment": "center",
             "verticalTextAlignment": "top",
             "characterSize": 48,
             "lineHeight": 0,
@@ -4149,7 +5599,7 @@
           "behaviors": [],
           "string": "error: flapPower information not retreived!",
           "font": "",
-          "textAlignment": "left",
+          "textAlignment": "center",
           "characterSize": 48,
           "color": {
             "b": 0,
@@ -4172,7 +5622,7 @@
             "underlined": false,
             "text": "error: flapPower information not retreived!",
             "font": "",
-            "textAlignment": "left",
+            "textAlignment": "center",
             "verticalTextAlignment": "top",
             "characterSize": 48,
             "lineHeight": 0,
@@ -4192,7 +5642,7 @@
           "behaviors": [],
           "string": "error: speed information not retreived!",
           "font": "",
-          "textAlignment": "left",
+          "textAlignment": "center",
           "characterSize": 48,
           "color": {
             "b": 0,
@@ -4215,7 +5665,7 @@
             "underlined": false,
             "text": "error: speed information not retreived!",
             "font": "",
-            "textAlignment": "left",
+            "textAlignment": "center",
             "verticalTextAlignment": "top",
             "characterSize": 48,
             "lineHeight": 0,
@@ -4666,6 +6116,126 @@
             "HoveredFadeOutDuration": 0.25,
             "LabelText": "CREDITS"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "ShopBackground",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/heaven.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 0
+                          },
+                          {
+                            "x": 3000,
+                            "y": 1950
+                          },
+                          {
+                            "x": 0,
+                            "y": 1950
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Pillar",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/marblepedestal.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 131,
+                            "y": 500
+                          },
+                          {
+                            "x": 1820,
+                            "y": 500
+                          },
+                          {
+                            "x": 1820,
+                            "y": 3000
+                          },
+                          {
+                            "x": 131,
+                            "y": 3000
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -4714,6 +6284,12 @@
           },
           {
             "objectName": "CreditsButton"
+          },
+          {
+            "objectName": "ShopBackground"
+          },
+          {
+            "objectName": "Pillar"
           }
         ]
       },
